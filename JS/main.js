@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------ */
 
 /* ******************* */
-/* ***** Toggle ***** */
+/* ***** Toggle ****** */
 /* ******************* */
 
 let contain = document.getElementById('contain');
@@ -17,9 +17,12 @@ setTimeout(() => {
     contain.classList.add('sign-in');
 }, 200);
 
-/* ******************* */
+
+/* ************************************** */
+/* ***** Validation & Local Storage ***** */
+/* ************************************** */
+
 /* ***** Sign Up ***** */
-/* ******************* */
 
 const signUpBtn = document.querySelector(".sign-up button");
 signUpBtn.addEventListener("click", (e) => {
@@ -75,9 +78,7 @@ signUpBtn.addEventListener("click", (e) => {
     toggle();
 });
 
-/* ******************* */
 /* ***** Sign In ***** */
-/* ******************* */
 
 const signInBtn = document.querySelector(".sign-in button");
 signInBtn.addEventListener("click", (e) => {
@@ -103,6 +104,65 @@ signInBtn.addEventListener("click", (e) => {
         alert("Invalid email or password");
     }
 });
+
+/* ************************* */
+/* ***** Show Password ***** */
+/* ************************* */
+
+/* ***** Sign In ***** */
+
+const toggleSignInPassword = document.getElementById('toggleSignInPassword');
+const passwordInputSignIn = document.getElementById('signin-password');
+const eyeIconSignIn = document.getElementById('eyeIconSignIn');
+
+toggleSignInPassword.addEventListener('click', () => {
+    if (passwordInputSignIn.type === "password") {
+        passwordInputSignIn.type = "text";
+        eyeIconSignIn.classList.remove("bi-eye");
+        eyeIconSignIn.classList.add("bi-eye-slash");
+    } else {
+        passwordInputSignIn.type = "password";
+        eyeIconSignIn.classList.remove("bi-eye-slash");
+        eyeIconSignIn.classList.add("bi-eye");
+    }
+});
+
+/* ***** Sign Up (Password) ***** */
+
+const toggleSignUpPassword = document.getElementById('toggleSignUpPassword');
+const passwordInputSignUp = document.getElementById('signup-password');
+const eyeIconSignUp = document.getElementById('eyeIconSignUp');
+
+toggleSignUpPassword.addEventListener('click', () => {
+    if (passwordInputSignUp.type === "password") {
+        passwordInputSignUp.type = "text";
+        eyeIconSignUp.classList.remove("bi-eye");
+        eyeIconSignUp.classList.add("bi-eye-slash");
+    } else {
+        passwordInputSignUp.type = "password";
+        eyeIconSignUp.classList.remove("bi-eye-slash");
+        eyeIconSignUp.classList.add("bi-eye");
+    }
+});
+
+/* ***** Sign Up (Confirm) ***** */
+
+const toggleConfirmPassword = document.getElementById('toggleSignUpConfirmPassword');
+const passwordConfirmInput = document.getElementById('signup-confirm');
+const eyeIconConfirm = document.getElementById('eyeIconConfirm');
+
+toggleConfirmPassword.addEventListener('click', () => {
+    if (passwordConfirmInput.type === "password") {
+        passwordConfirmInput.type = "text";
+        eyeIconConfirm.classList.remove("bi-eye");
+        eyeIconConfirm.classList.add("bi-eye-slash");
+    } else {
+        passwordConfirmInput.type = "password";
+        eyeIconConfirm.classList.remove("bi-eye-slash");
+        eyeIconConfirm.classList.add("bi-eye");
+    }
+});
+
 
 /* ------------------------------------------------------------------ */
 /* ========================  ======================== */

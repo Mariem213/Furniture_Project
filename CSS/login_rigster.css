@@ -158,6 +158,14 @@
 	border-bottom-left-radius: 10px !important;
 }
 
+.input-group:not(.has-validation)
+	> :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(
+		.form-floating
+	) {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
 .input-group input:focus {
 	border: 1px solid var(--primary-color);
 }
@@ -188,6 +196,14 @@
 .contain.sign-in .form.sign-in,
 .contain.sign-up .form.sign-up {
 	transform: scale(1);
+}
+
+.toggle-password {
+	position: absolute;
+	right: 15%;
+	top: 50%;
+	cursor: pointer;
+	color: #ae6902;
 }
 
 /* /////////////////////////// */

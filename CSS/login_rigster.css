@@ -134,6 +134,7 @@
 	position: relative;
 	width: 100%;
 	margin: 1rem 0;
+	display: flex;
 }
 
 .input-group i {
@@ -158,6 +159,15 @@
 	border-bottom-left-radius: 10px !important;
 }
 
+.toggle-password {
+	position: absolute;
+	right: 15%;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	color: #ae6902;
+}
+
 .input-group:not(.has-validation)
 	> :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(
 		.form-floating
@@ -168,6 +178,16 @@
 
 .input-group input:focus {
 	border: 1px solid var(--primary-color);
+}
+
+.error-message {
+	font-size: 0.9rem;
+}
+input.is-invalid {
+	border: 1px solid red !important;
+}
+input.is-valid {
+	border: 1px solid var(--primary-color) !important;
 }
 
 .form button {
@@ -196,14 +216,6 @@
 .contain.sign-in .form.sign-in,
 .contain.sign-up .form.sign-up {
 	transform: scale(1);
-}
-
-.toggle-password {
-	position: absolute;
-	right: 15%;
-	top: 50%;
-	cursor: pointer;
-	color: #ae6902;
 }
 
 /* /////////////////////////// */

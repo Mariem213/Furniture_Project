@@ -102,6 +102,8 @@ signUpBtn.addEventListener("click", (e) => {
     let passIcon = document.querySelector(".sign-up .pass .bi-lock");
     let confirmIcon = document.querySelector(".sign-up .conPass .bi-lock");
     let phoneIcon = document.querySelector(".sign-up .bi-telephone");
+    let userImageInput = document.querySelector(".signup-image");
+    let imageIcon = document.querySelector(".sign-up .bi-image");
 
     let isValid = true;
 
@@ -174,19 +176,34 @@ signUpBtn.addEventListener("click", (e) => {
         return;
     }
 
-    let newUser = {
-        username: username.value.trim(),
-        email: email.value.trim(),
-        password: password.value.trim(),
-        phone: phone.value.trim()
+    let file = userImageInput.files[0];
+    if (!file) {
+        setError(userImageInput, "Please upload a profile picture");
+        imageIcon.style.top = "37%";
+        return;
+    } else {
+        imageIcon.style.top = "50%";
+    }
+
+    let reader = new FileReader();
+    reader.onload = function (event) {
+        let newUser = {
+            username: username.value.trim(),
+            email: email.value.trim(),
+            password: password.value.trim(),
+            phone: phone.value.trim(),
+            userImage: event.target.result
+        };
+
+        users.push(newUser);
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Sign Up successful! Please Sign In.");
+        toggle();
     };
+    reader.readAsDataURL(file);
 
-    users.push(newUser);
-
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Sign Up successful! Please Sign In.");
-    toggle();
 });
 
 /* ***** Sign In ***** */

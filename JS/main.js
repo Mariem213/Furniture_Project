@@ -39,3 +39,20 @@ document.querySelector('.canvas_close a').addEventListener('click', () => {
     document.querySelector('.offcanvas_menu_wrapper').classList.remove('active');
     document.querySelector('.body_overlay').classList.remove('active');
 });
+
+/* ------------------------------------------------------------------ */
+/* ======================= User Profile Image ======================= */
+/* ------------------------------------------------------------------ */
+
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+if (currentUser && currentUser.userImage) {
+    let defaultIcon = document.getElementById("defaultIcon");
+    let userToggle = document.getElementById("userToggle");
+    defaultIcon.style.display = "none";
+    let img = document.createElement("img");
+    img.src = currentUser.userImage;
+    img.alt = "User";
+    img.classList = "user-profile-image";
+    userToggle.appendChild(img);
+}

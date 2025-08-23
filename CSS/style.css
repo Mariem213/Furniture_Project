@@ -119,6 +119,40 @@ ul {
 	padding: 0;
 }
 
+.btn {
+	font-weight: 600;
+	padding: 12px 30px;
+	border-radius: 30px;
+	color: #ffffff;
+	background: #744312;
+	border-color: #744312;
+	transition: 0.5s all ease-in-out;
+	-webkit-transition: 0.5s all ease-in-out;
+	-moz-transition: 0.5s all ease-in-out;
+	-ms-transition: 0.5s all ease-in-out;
+	-o-transition: 0.5s all ease-in-out;
+}
+.btn:hover {
+	color: #8d3c1c;
+	background: #eee;
+	border-color: #eee;
+}
+.btn:active,
+.btn:focus {
+	outline: none !important;
+	box-shadow: none;
+}
+
+.btn.btn-white-outline {
+	background: transparent;
+	border-width: 2px;
+	border-color: rgba(255, 255, 255, 0.3);
+}
+.btn.btn-white-outline:hover {
+	border-color: white;
+	color: #ffffff;
+}
+
 /* /////////////////////////////////////////////////////////////////////////////////// */
 
 /* 01. header css here */
@@ -965,50 +999,6 @@ ul {
 	top: 210px;
 }
 
-.btn {
-	font-weight: 600;
-	padding: 12px 30px;
-	border-radius: 30px;
-	color: #ffffff;
-	background: #2f2f2f;
-	border-color: #2f2f2f;
-}
-.btn:hover {
-	color: #ffffff;
-	background: #222222;
-	border-color: #222222;
-}
-.btn:active,
-.btn:focus {
-	outline: none !important;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-.btn.btn-secondary {
-	color: #eee;
-	background: #744312;
-	border-color: #744312;
-	transition: 0.5s all ease-in-out;
-	-webkit-transition: 0.5s all ease-in-out;
-	-moz-transition: 0.5s all ease-in-out;
-	-ms-transition: 0.5s all ease-in-out;
-	-o-transition: 0.5s all ease-in-out;
-}
-.btn.btn-secondary:hover {
-	color: #8d3c1c;
-	background: #eee;
-	border-color: #eee;
-}
-.btn.btn-white-outline {
-	background: transparent;
-	border-width: 2px;
-	border-color: rgba(255, 255, 255, 0.3);
-}
-.btn.btn-white-outline:hover {
-	border-color: white;
-	color: #ffffff;
-}
-
 @media (min-width: 768px) {
 	.hero {
 		padding: calc(4rem - 30px) 0 4rem 0;
@@ -1055,3 +1045,113 @@ ul {
 }
 
 /* ////////////////////////////////////////////// */
+
+.product-section {
+	padding: 7rem 0;
+	margin-top: 15rem;
+}
+.product-section .product-item {
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	position: relative;
+	padding-bottom: 30px;
+	cursor: pointer;
+	width: 100%;
+	height: 25vh;
+}
+.product-section .product-item .product-thumbnail {
+	margin-bottom: 30px;
+	position: relative;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	transition: 0.3s all ease;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+}
+.product-section .product-item h3 {
+	font-weight: 600;
+	font-size: 16px;
+	margin-top: 1.5rem;
+}
+.product-section .product-item strong {
+	font-weight: 800 !important;
+	font-size: 18px !important;
+}
+.product-section .product-item h3,
+.product-section .product-item strong {
+	color: #2f2f2f;
+	text-decoration: none;
+}
+.product-section .product-item .icon-cross {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	background: #2f2f2f;
+	bottom: 15px;
+	left: 50%;
+	margin-bottom: -17.5px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transition: 0.3s all ease;
+	-webkit-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	-moz-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+}
+
+.product-section .product-item .icon-cross i {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 2rem;
+	font-weight: 700;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+.product-section .product-item:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #d8d4ce;
+	height: 0%;
+	z-index: -1;
+	border-radius: 10px;
+	-webkit-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+}
+.product-section .product-item:hover .product-thumbnail {
+	top: -25px;
+}
+.product-section .product-item:hover .icon-cross {
+	bottom: 0;
+	opacity: 1;
+	visibility: visible;
+}
+.product-section .product-item:hover:before {
+	height: 70%;
+}
+
+@media (max-width: 768px) {
+	.product-section .product-item {
+		margin-bottom: 7rem;
+	}
+}

@@ -58,6 +58,46 @@ if (currentUser && currentUser.userImage) {
 }
 
 /* ------------------------------------------------------------------ */
-/* =======================  ======================= */
+/* ======================= Testimonial Slider ======================= */
 /* ------------------------------------------------------------------ */
 
+let slides = document.querySelector(".slides");
+let cards = document.querySelectorAll(".card");
+let indicatorsBox = document.querySelector(".indicators");
+let index = 0;
+
+let firstClone = cards[0].cloneNode(true);
+slides.appendChild(firstClone);
+
+cards.forEach((_, i) => {
+    let dot = document.createElement("span");
+    if (i === 0) dot.classList.add("active");
+    dot.onclick = () => showSlide(i);
+    indicatorsBox.appendChild(dot);
+});
+
+let dots = document.querySelectorAll(".indicators span");
+
+function showSlide(i) {
+    index = i;
+    slides.style.transition = "transform 0.5s ease";
+    slides.style.transform = `translateX(-${i * 100}%)`;
+
+    dots.forEach(d => d.classList.remove("active"));
+    if (i < dots.length) dots[i].classList.add("active");
+}
+
+setInterval(() => {
+    index++;
+    showSlide(index);
+
+    if (index === cards.length) {
+        setTimeout(() => {
+            slides.style.transition = "none";
+            index = 0;
+            slides.style.transform = "translateX(0)";
+            dots.forEach(d => d.classList.remove("active"));
+            dots[0].classList.add("active");
+        }, 500);
+    }
+}, 3000);

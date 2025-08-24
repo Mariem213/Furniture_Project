@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /*-- Common Style --*/
@@ -1320,3 +1324,37 @@ ul {
 }
 
 /* ////////////////////////////////////////// */
+
+.slider {
+	width: 300px;
+	overflow: hidden;
+	margin: auto;
+	position: relative;
+}
+.slides {
+	display: flex;
+	transition: 0.5s;
+}
+.card {
+	min-width: 100%;
+	text-align: center;
+	padding: 40px;
+	background: #f4f4f4;
+	border: 1px solid #ccc;
+}
+.indicators {
+	text-align: center;
+	margin-top: 10px;
+}
+.indicators span {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 5px;
+	border-radius: 50%;
+	background: #bbb;
+	cursor: pointer;
+}
+.indicators .active {
+	background: #333;
+}

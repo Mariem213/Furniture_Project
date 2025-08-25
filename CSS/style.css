@@ -1721,3 +1721,16 @@ ul {
 	visibility: hidden;
 	transition: opacity 0.8s ease, visibility 0.8s ease;
 }
+
+/* ////////////////////////////////////////////// */
+
+section {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.show {
+	opacity: 1;
+	transform: translateY(0);
+}

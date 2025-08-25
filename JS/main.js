@@ -162,3 +162,26 @@ links.forEach(link => {
         this.classList.add("active");
     });
 });
+
+/* ------------------------------------------------------------------ */
+/* ========================= Fade Sections ========================== */
+/* ------------------------------------------------------------------ */
+
+let sections = document.querySelectorAll("section");
+
+function checkSections() {
+    let triggerBottom = window.innerHeight * 0.8;
+    sections.forEach(section => {
+        let boxTop = section.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+            section.classList.add("show");
+        } else {
+            section.classList.remove("show");
+        }
+    });
+}
+
+checkSections();
+
+window.addEventListener("scroll", checkSections);

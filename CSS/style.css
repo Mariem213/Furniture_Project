@@ -1561,3 +1561,37 @@ ul {
 .copy p strong {
 	color: #744312;
 }
+
+/* /////////////////////////////////////////////// */
+
+#scrollTopBtn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 45px;
+	height: 45px;
+	border: 2px solid #8d3c1c;
+	background: #8d3c1c;
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 4;
+	border-radius: 20%;
+	-webkit-border-radius: 20%;
+	-moz-border-radius: 20%;
+	-ms-border-radius: 20%;
+	-o-border-radius: 20%;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+	background: #fff;
+	color: #8d3c1c;
+}

@@ -104,5 +104,28 @@ setInterval(() => {
 
 
 /* ------------------------------------------------------------------ */
-/* =======================  ======================= */
+/* =========================== Scroll Top =========================== */
 /* ------------------------------------------------------------------ */
+
+let scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+        scrollBtn.style.display = "flex";
+        scrollBtn.style.opacity = "1";
+    } else {
+        scrollBtn.style.opacity = "0";
+        setTimeout(() => {
+            if (window.scrollY <= 200) {
+                scrollBtn.style.display = "none";
+            }
+        }, 300);
+    }
+});
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});

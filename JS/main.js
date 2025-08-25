@@ -143,5 +143,22 @@ window.addEventListener("load", function () {
 });
 
 /* ------------------------------------------------------------------ */
-/* =============================  ============================= */
+/* ========================== Fixed Navbar ========================== */
 /* ------------------------------------------------------------------ */
+
+window.addEventListener("scroll", function () {
+    let navbar = document.querySelector(".header_section");
+    if (window.scrollY > 300) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+let links = document.querySelectorAll(".nav-link");
+links.forEach(link => {
+    link.addEventListener("click", function () {
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+    });
+});

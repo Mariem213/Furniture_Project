@@ -328,6 +328,21 @@ ul {
 
 /* /////////////////////////////////////////////////////////////////////////////////// */
 
+.header_section {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	width: 100%;
+	background: #eee;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+}
+
 .header_section .container {
 	max-width: 1570px;
 }
@@ -372,6 +387,11 @@ ul {
 
 .main_header {
 	padding: 47px 0 42px;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.main_header {
@@ -615,6 +635,10 @@ ul {
 }
 .dropdown_account_link li a:hover {
 	color: #ab6e35;
+}
+
+.header_section.scrolled .main_header {
+	padding: 20px 0;
 }
 
 /*mini cart css here*/
@@ -933,6 +957,8 @@ ul {
 	background: #aa7f46;
 	padding: calc(4rem - 30px) 0 0rem 0;
 	height: 70%;
+	position: relative;
+	top: 8rem;
 }
 
 .hero .row {

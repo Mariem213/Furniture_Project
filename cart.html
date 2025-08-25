@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Shop | Cart Page</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/cart.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <!--offcanvas menu area start-->
+        <div class="body_overlay"></div>
+        <div class="offcanvas_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="offcanvas_menu_wrapper">
+                            <div class="canvas_close">
+                                <a><i class="bi bi-x-circle"></i></a>
+                            </div>
+                            <div id="menu" class="text-left ">
+                                <ul class="offcanvas_main_menu">
+                                    <li class="menu-item-has-children active">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="index.html">About Us</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="shop.html">Shop</a>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="contact.html">Contact Us</a></li>
+                                    <li class="menu-item-has-children"><a href="login_rigster.html">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--header area start-->
+        <header class="header_section mb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main_header d-flex justify-content-between align-items-center">
+                            <div class="header_logo">
+                                <a class="sticky_none" href="#"><img src="images/main-logo.png" alt=""></a>
+                            </div>
+                            <div class="main_menu d-none d-lg-block">
+                                <nav>
+                                    <ul class="d-flex">
+                                        <li><a class="active" href="index.html">Home</a>
+                                        </li>
+                                        <li><a href="index.html">About Us</a>
+                                        </li>
+                                        <li><a href="shop.html">Shop </a>
+                                        </li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header__ridebar d-flex align-items-center">
+                                <div class="header_account">
+                                    <ul class="d-flex">
+                                        <li class="header_search_btn" data-bs-toggle="modal"
+                                            data-bs-target="#searchModal">
+                                            <a href="#">
+                                                <i class="bi bi-search"></i>
+                                            </a>
+                                        </li>
+                                        <li class="shopping_cart">
+                                            <a href="#">
+                                                <i class="bi bi-cart"></i>
+                                            </a>
+                                        </li>
+                                        <li class="account_link_menu" id="navUserIcon">
+                                            <a href="#" id="userToggle">
+                                                <i class="bi bi-person" id="defaultIcon"></i>
+                                            </a>
+                                            <ul class="dropdown_account_link">
+                                                <li><a href="login_rigster.html" id="logoutBtn">Logout</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="canvas_open">
+                                    <a><i class="bi bi-list"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--mini cart-->
+        <div class="mini_cart">
+            <div class="cart_gallery">
+                <div class="cart_close">
+                    <div class="cart_text">
+                        <h3>cart</h3>
+                    </div>
+                    <div class="mini_cart_close">
+                        <a><i class="bi bi-x-circle"></i></a>
+                    </div>
+                </div>
+                <div class="cart_item">
+                    <div class="cart_img">
+                        <a href="#"><img src="images/Product_1.png" alt=""></a>
+                    </div>
+                    <div class="cart_info">
+                        <a href="#">Primis In Faucibus</a>
+                        <p>1 x <span> $65.00 </span></p>
+                    </div>
+                    <div class="cart_remove">
+                        <a href="#"><i class="bi bi-x icon-close icons"></i></a>
+                    </div>
+                </div>
+                <div class="cart_item">
+                    <div class="cart_img">
+                        <a href="#"><img src="images/Product_2.png" alt=""></a>
+                    </div>
+                    <div class="cart_info">
+                        <a href="#">Letraset Sheets</a>
+                        <p>1 x <span> $60.00 </span></p>
+                    </div>
+                    <div class="cart_remove">
+                        <a href="#"><i class="bi bi-x icon-close icons"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mini_cart_table">
+                <div class="cart_table_border">
+                    <div class="cart_total">
+                        <span>Sub total:</span>
+                        <span class="price">$125.00</span>
+                    </div>
+                    <div class="cart_total mt-10">
+                        <span>total:</span>
+                        <span class="price">$125.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mini_cart_footer">
+                <div class="cart_button">
+                    <a href="#"><i class="bi bi-cart"></i> View cart</a>
+                </div>
+                <div class="cart_button">
+                    <a href="checkout.html"><i class="bi bi-box-arrow-in-right"></i> Checkout</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Modal -->
+        <div class="modal fade" id="searchModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content page_search_box">
+                    <div class="search_close" data-bs-dismiss="modal">
+                        <i class="bi bi-x"></i>
+                    </div>
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5">Searching</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form class="border-bottom" action="#">
+                            <input class="border-0" placeholder="Search products..." type="text">
+                            <button type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>Cart</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Items Of Products -->
+    <div class="itemProducts">
+        <div class="container">
+            <div class="row mb-5">
+                <form class="col-md-12" method="post">
+                    <div class="blockTable">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="product-image">Image</th>
+                                    <th class="product-name">Product</th>
+                                    <th class="product-price">Price</th>
+                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-total">Total</th>
+                                    <th class="product-remove">Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="product-image">
+                                        <img src="images/Product_1.png" alt="Image" class="img-fluid">
+                                    </td>
+                                    <td class="product-name">
+                                        <h2 class="h5 text-black">Product 1</h2>
+                                    </td>
+                                    <td>$49.00</td>
+                                    <td class="num">
+                                        <div class="input-group mb-3 quantity-container">
+                                            <div class="input-group-prepend">
+                                                <button class="iconbtn btn-outline-black decrease"
+                                                    type="button">&minus;</button>
+                                            </div>
+                                            <input type="text" class="form-control text-center quantity-amount"
+                                                value="1" placeholder="" aria-describedby="button-addon1">
+                                            <div class="input-group-append">
+                                                <button class="iconbtn btn-outline-black increase"
+                                                    type="button">&plus;</button>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td>$49.00</td>
+                                    <td class="removeItem">
+                                        <a href="#" class="iconbtn btn-black btn-sm">
+                                            <i class="bi bi-x-circle-fill"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="product-image">
+                                        <img src="images/Product_2.png" alt="Image" class="img-fluid">
+                                    </td>
+                                    <td class="product-name">
+                                        <h2 class="h5 text-black">Product 2</h2>
+                                    </td>
+                                    <td>$49.00</td>
+                                    <td class="num">
+                                        <div class="input-group mb-3 quantity-container">
+                                            <div class="input-group-prepend">
+                                                <button class="iconbtn btn-outline-black decrease"
+                                                    type="button">&minus;</button>
+                                            </div>
+                                            <input type="text" class="form-control text-center quantity-amount"
+                                                value="1" placeholder="" aria-describedby="button-addon1">
+                                            <div class="input-group-append">
+                                                <button class="iconbtn btn-outline-black increase"
+                                                    type="button">&plus;</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>$49.00</td>
+                                    <td class="removeItem">
+                                        <a href="#" class="iconbtn btn-black btn-sm">
+                                            <i class="bi bi-x-circle-fill"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row mb-5">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <button class="btn btn-sm btn-block">Update Cart</button>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="shop.html">
+                                <button class="btn btn-sm btn-block">Continue Shopping</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pl-5">
+                    <div class="row justify-content-end">
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-md-12 text-right border-bottom mb-5">
+                                    <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <span class="text-black">Subtotal</span>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <strong class="text-black">$230.00</strong>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-md-6">
+                                    <span class="text-black">Total</span>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <strong class="text-black">$230.00</strong>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn py-3 btn-block" onclick="window.location='checkout.html'">
+                                        Proceed To Checkout
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Links -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

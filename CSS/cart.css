@@ -1,0 +1,75 @@
+.hero {
+	height: 40%;
+}
+
+.itemProducts {
+	padding: 7rem 0;
+}
+
+.blockTable {
+	overflow: auto;
+}
+
+.blockTable .product-image {
+	width: 200px;
+}
+
+.blockTable thead th {
+	padding: 30px;
+	text-align: center;
+	border-width: 0px !important;
+	vertical-align: middle;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 18px;
+}
+.blockTable td {
+	padding: 20px;
+	text-align: center;
+	vertical-align: middle;
+	color: rgba(0, 0, 0, 0.8);
+}
+.blockTable tbody tr:first-child td {
+	border-top: 1px solid #3b5d50 !important;
+}
+
+.num {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #3b5d50;
+}
+
+.num .input-group {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 150px;
+	padding: 32px 0;
+}
+
+.num .input-group .iconbtn {
+	margin: 0 1rem;
+}
+
+.iconbtn {
+	font-weight: 600;
+	color: #2f2f2f;
+	border: none;
+	background: transparent;
+}
+
+.iconbtn:hover {
+	color: #744312;
+}
+
+.iconbtn i {
+	font-size: 1.5rem;
+	color: #744312;
+}
+
+@media (max-width: 960px) {
+	.num .input-group {
+		max-width: 50px;
+		padding: 0;
+	}
+}

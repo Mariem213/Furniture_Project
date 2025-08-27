@@ -410,16 +410,6 @@ function updateCategoryCounts(products) {
     });
 }
 
-function filterProducts(category) {
-    products.forEach(product => {
-        if (category === 'all' || product.dataset.category === category) {
-            product.style.display = 'block';
-        } else {
-            product.style.display = 'none';
-        }
-    });
-}
-
 document.querySelectorAll('.widget_categories ul li a').forEach(cat => {
     cat.addEventListener('click', e => {
         e.preventDefault();
@@ -428,8 +418,58 @@ document.querySelectorAll('.widget_categories ul li a').forEach(cat => {
 });
 
 updateCategoryCounts(products);
-filterProducts('all');
+
 
 /* ------------------------------------------------------------------ */
-/* ===================== Filtering Data By Tag ====================== */
+/* ========================= Pagination ============================= */
 /* ------------------------------------------------------------------ */
+
+let currentPage = 1;
+const productsPerPage = 12;
+const paginationContainer = document.getElementById("pagination");
+
+function renderPaginatedProducts(list, page = 1) {
+    const start = (page - 1) * productsPerPage;
+    const end = start + productsPerPage;
+    const paginatedItems = list.slice(start, end);
+
+    displayProducts(paginatedItems);
+    renderPaginationControls(list.length, page);
+}
+
+function renderPaginationControls(totalItems, currentPage) {
+    paginationContainer.innerHTML = "";
+    const totalPages = Math.ceil(totalItems / productsPerPage);
+
+    if (currentPage > 1) {
+        const prevBtn = document.createElement("button");
+        prevBtn.textContent = "Prev";
+        prevBtn.className = "btn nePrBTN btn-sm btn-outline-dark mx-1";
+        prevBtn.addEventListener("click", () => {
+            renderPaginatedProducts(products, currentPage - 1);
+        });
+        paginationContainer.appendChild(prevBtn);
+    }
+
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        btn.className = `btn btn-sm mx-1 ${i === currentPage ? "btn-dark" : "btn-outline-dark"}`;
+        btn.addEventListener("click", () => {
+            renderPaginatedProducts(products, i);
+        });
+        paginationContainer.appendChild(btn);
+    }
+
+    if (currentPage < totalPages) {
+        const nextBtn = document.createElement("button");
+        nextBtn.textContent = "Next";
+        nextBtn.className = "btn nePrBTN btn-sm btn-outline-dark mx-1";
+        nextBtn.addEventListener("click", () => {
+            renderPaginatedProducts(products, currentPage + 1);
+        });
+        paginationContainer.appendChild(nextBtn);
+    }
+}
+
+renderPaginatedProducts(products, currentPage);

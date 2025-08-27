@@ -2,8 +2,13 @@
 	height: 40%;
 }
 
+.breadcrumb span {
+	font-size: 1rem;
+	color: #eee;
+}
+
 .itemProducts {
-	padding: 7rem 0;
+	padding: 15rem 0;
 }
 
 .blockTable {

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furniture Shop | Cart Page</title>
+    <title>Furniture Shop</title>
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
@@ -12,7 +13,7 @@
 
     <!-- CSS files -->
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/cart.css">
+    <link rel="stylesheet" href="CSS/shop.css">
 </head>
 
 <body>
@@ -37,9 +38,9 @@
                                         <a href="index.html">About Us</a>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="shop.html">Shop</a>
+                                        <a href="#">Shop</a>
                                     </li>
-                                    <li class="menu-item-has-children"><a href="contact.html">Contact Us</a></li>
+                                    <li class="menu-item-has-children"><a href="index.html">Contact Us</a></li>
                                     <li class="menu-item-has-children"><a href="login_rigster.html">Logout</a></li>
                                 </ul>
                             </div>
@@ -61,13 +62,13 @@
                             <div class="main_menu d-none d-lg-block">
                                 <nav>
                                     <ul class="d-flex">
-                                        <li><a class="active" href="index.html">Home</a>
+                                        <li><a class="active nav-link" href="index.html">Home</a>
                                         </li>
-                                        <li><a href="index.html">About Us</a>
+                                        <li><a class="nav-link" href="index.html">About Us</a>
                                         </li>
-                                        <li><a href="shop.html">Shop </a>
+                                        <li><a class="nav-link" href="#">Shop </a>
                                         </li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a class="nav-link" href="index.html">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -155,7 +156,7 @@
             </div>
             <div class="mini_cart_footer">
                 <div class="cart_button">
-                    <a href="#"><i class="bi bi-cart"></i> View cart</a>
+                    <a href="cart.html"><i class="bi bi-cart"></i> View cart</a>
                 </div>
                 <div class="cart_button">
                     <a href="checkout.html"><i class="bi bi-box-arrow-in-right"></i> Checkout</a>
@@ -193,14 +194,22 @@
             <div class="row justify-content-between">
                 <div class="col-lg-5">
                     <div class="intro-excerpt">
-                        <h1>Cart</h1>
+
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <h1>Shop</h1>
+                                </li>
+                            </ol>
+                        </nav>
+
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">
                                         <span>Home</span>
                                     </a></li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    <span>Cart</span>
+                                    <span>Shop</span>
                                 </li>
                             </ol>
                         </nav>
@@ -210,134 +219,88 @@
         </div>
     </div>
 
-    <!-- Items Of Products -->
-    <div class="itemProducts">
+    <!-- shop section -->
+    <div class="shop_page_section">
         <div class="container">
-            <div class="row mb-5">
-                <form class="col-md-12" method="post">
-                    <div class="blockTable">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th class="product-image">Image</th>
-                                    <th class="product-name">Product</th>
-                                    <th class="product-price">Price</th>
-                                    <th class="product-quantity">Quantity</th>
-                                    <th class="product-total">Total</th>
-                                    <th class="product-remove">Remove</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="product-image">
-                                        <img src="images/Product_1.png" alt="Image" class="img-fluid">
-                                    </td>
-                                    <td class="product-name">
-                                        <h2 class="h5 text-black">Product 1</h2>
-                                    </td>
-                                    <td>$49.00</td>
-                                    <td class="num">
-                                        <div class="input-group mb-3 quantity-container">
-                                            <div class="input-group-prepend">
-                                                <button class="iconbtn btn-outline-black decrease"
-                                                    type="button">&minus;</button>
-                                            </div>
-                                            <input type="text" class="form-control text-center quantity-amount"
-                                                value="1" placeholder="" aria-describedby="button-addon1">
-                                            <div class="input-group-append">
-                                                <button class="iconbtn btn-outline-black increase"
-                                                    type="button">&plus;</button>
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                    <td>$49.00</td>
-                                    <td class="removeItem">
-                                        <a href="#" class="iconbtn btn-black btn-sm">
-                                            <i class="bi bi-x-circle-fill"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="product-image">
-                                        <img src="images/Product_2.png" alt="Image" class="img-fluid">
-                                    </td>
-                                    <td class="product-name">
-                                        <h2 class="h5 text-black">Product 2</h2>
-                                    </td>
-                                    <td>$49.00</td>
-                                    <td class="num">
-                                        <div class="input-group mb-3 quantity-container">
-                                            <div class="input-group-prepend">
-                                                <button class="iconbtn btn-outline-black decrease"
-                                                    type="button">&minus;</button>
-                                            </div>
-                                            <input type="text" class="form-control text-center quantity-amount"
-                                                value="1" placeholder="" aria-describedby="button-addon1">
-                                            <div class="input-group-append">
-                                                <button class="iconbtn btn-outline-black increase"
-                                                    type="button">&plus;</button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>$49.00</td>
-                                    <td class="removeItem">
-                                        <a href="#" class="iconbtn btn-black btn-sm">
-                                            <i class="bi bi-x-circle-fill"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </form>
-            </div>
-
             <div class="row">
-                <div class="col-md-6">
-                    <div class="row mb-5">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <button class="btn btn-sm btn-block">Update Cart</button>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="shop.html">
-                                <button class="btn btn-sm btn-block">Continue Shopping</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 pl-5">
-                    <div class="row justify-content-end">
-                        <div class="col-md-7">
-                            <div class="row">
-                                <div class="col-md-12 text-right border-bottom mb-5">
-                                    <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
+                <div class="col-12">
+                    <div class="shop_page_inner d-flex ">
+                        <!-- Sidebar -->
+                        <div class="shop_sidebar_widget">
+                            <div class="shop_widget_list categories">
+                                <div class="shop_widget_title categories_title">
+                                    <h3>Categories</h3>
+                                </div>
+                                <div class="widget_categories">
+                                    <ul>
+                                        <li><a href="#">Furniture(53)</a></li>
+                                        <li><a href="#">Table(2)</a></li>
+                                        <li><a href="#">Bedroom(26)</a></li>
+                                        <li><a href="#">Chair(11)</a></li>
+                                        <li><a href="#">Sofa(13)</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <span class="text-black">Subtotal</span>
+                            <div class="shop_widget_list">
+                                <div class="shop_widget_title">
+                                    <h3>by prices</h3>
                                 </div>
-                                <div class="col-md-6 text-right">
-                                    <strong class="text-black">$230.00</strong>
+                                <div class="widget_proce_filter">
+                                    <form action="#">
+                                        <span>Max Price: $<span id="rangeValue">100</span></span>
+                                        <input type="range" class="form-range" min="0" max="1000" value="500"
+                                            id="customRange4">
+
+                                        <button id="filterBtn">Filter Price</button>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="row mb-5">
-                                <div class="col-md-6">
-                                    <span class="text-black">Total</span>
+                            <div class="shop_widget_list">
+                                <div class="shop_widget_title">
+                                    <h3>Tags cloud</h3>
                                 </div>
-                                <div class="col-md-6 text-right">
-                                    <strong class="text-black">$230.00</strong>
+                                <div class="widget_tags">
+                                    <ul>
+                                        <li><a href="#">FURNITURE</a></li>
+                                        <li><a href="#">DECOR</a></li>
+                                        <li><a href="#">Cheir</a></li>
+                                        <li><a href="#">Bed room</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="shop_widget_thumb">
+                                <img src="images/All Products/binner.png" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Right side -->
+                        <div class="shop_right_sidaber">
+                            <div class="shop_top_bar d-flex justify-content-between">
+                                <div class="shop_product_count">
+                                </div>
+                                <div class="shop_top_right d-flex">
+                                    <div class="product_sorting">
+                                        <select id="sortProducts">
+                                            <option value="default" selected>Default Sorting</option>
+                                            <option value="low-high">Price: Low to High</option>
+                                            <option value="high-low">Price: High to Low</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <button class="btn py-3 btn-block" onclick="window.location='checkout.html'">
-                                        Proceed To Checkout
-                                    </button>
-                                </div>
+                            <div class="shop_gallery">
+                                <div class="row" id="productsRow"></div>
+                            </div>
+
+                            <div class="loding_bar">
+                                <ul class="d-flex justify-content-center">
+                                    <li><a href="#">01</a></li>
+                                    <li><a href="#">02</a></li>
+                                    <li><a href="#">03</a></li>
+                                    <li><a href="#">04</a></li>
+                                    <li><a href="#"><i class="bi bi-arrow-right"></i></a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -417,6 +380,7 @@
         crossorigin="anonymous"></script>
 
     <script src="JS/main.js"></script>
+    <script src="JS/shop.js"></script>
 </body>
 
 </html>

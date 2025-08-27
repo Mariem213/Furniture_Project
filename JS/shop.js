@@ -251,7 +251,7 @@ for (const p of products) {
 }
 
 /* ------------------------------------------------------------------ */
-/* ========================= Sorting Data ========================== */
+/* ========================= Sorting Data =========================== */
 /* ------------------------------------------------------------------ */
 
 const productRow = document.getElementById("productsRow");
@@ -263,21 +263,21 @@ function renderProducts(products) {
         col.className = "col-lg-4 col-md-4 col-sm-6";
 
         col.innerHTML = `
-        <article class="single_product product-card">
-            <figure>
-                <div class="product_thumb">
-                    <a href="single-product.html"><img src="${p.img}" alt="${p.name}"></a>
-                    ${p.label ? `<div class="label_product"><span class="label_${p.label.toLowerCase()}">${p.label}</span></div>` : ""}
-                </div>
-                <figcaption class="product_content">
-                    <h4><a href="single-product.html">${p.name}</a></h4>
-                    <div class="price_box">
-                        <span class="current_price">${p.currentPrice}</span>
+            <article class="single_product product-card">
+                <figure>
+                    <div class="product_thumb">
+                        <a href="single-product.html"><img src="${p.img}" alt="${p.name}"></a>
+                        ${p.label ? `<div class="label_product"><span class="label_${p.label.toLowerCase()}">${p.label}</span></div>` : ""}
                     </div>
-                </figcaption>
-            </figure>
-        </article>
-    `;
+                    <figcaption class="product_content">
+                        <h4><a href="single-product.html">${p.name}</a></h4>
+                        <div class="price_box">
+                            <span class="current_price">${p.currentPrice}</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+        `;
         productRow.appendChild(col);
     }
 }
@@ -299,3 +299,52 @@ document.getElementById("sortProducts").addEventListener("change", function () {
 
     renderProducts(sortedProducts);
 });
+
+/* ------------------------------------------------------------------ */
+/* ========================== Price Range =========================== */
+/* ------------------------------------------------------------------ */
+
+const rangeInput = document.getElementById('customRange4');
+const rangeOutput = document.getElementById('rangeValue');
+
+rangeOutput.textContent = rangeInput.value;
+
+rangeInput.addEventListener('input', function () {
+    rangeOutput.textContent = this.value;
+});
+
+/* ------------------------------------------------------------------ */
+/* ==================== Filtering Data By Price ===================== */
+/* ------------------------------------------------------------------ */
+
+const filterBtn = document.getElementById("filterBtn");
+
+rangeInput.addEventListener("input", () => {
+    rangeOutput.textContent = rangeInput.value;
+});
+
+function renderProducts(list) {
+    row.innerHTML = "";
+    list.forEach(p => {
+        const price = parseFloat(p.currentPrice.replace("$", ""));
+        row.innerHTML += `
+            <div class="col-md-3 mb-3">
+                <div class="product-card">
+                <img src="${p.img}" alt="${p.name}">
+                <h6>${p.name}</h6>
+                <p class="fw-bold">${p.currentPrice}</p>
+                ${p.label ? `<span class="badge">${p.label}</span>` : ""}
+                </div>
+            </div>
+        `;
+    });
+}
+
+renderProducts(products);
+
+filterBtn.addEventListener("click", () => {
+    const maxPrice = parseFloat(rangeInput.value);
+    const filtered = products.filter(p => parseFloat(p.currentPrice.replace("$", "")) <= maxPrice);
+    renderProducts(filtered);
+});
+

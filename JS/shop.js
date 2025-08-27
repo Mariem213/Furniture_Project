@@ -9,7 +9,7 @@ const products = [
         currentPrice: "$129.99",
         img: "images/All Products/Chair/Product_1.png",
         label: "Sale",
-        category: "Chair",
+        category: "chair",
         tags: ["tufted", "beige", "wood", "fabric"]
     },
     {
@@ -18,7 +18,7 @@ const products = [
         currentPrice: "$189.99",
         img: "images/All Products/Chair/Product_2.png",
         label: "Available",
-        category: "Chair",
+        category: "chair",
         tags: ["classic", "fabric", "grey", "armchair"]
     },
     {
@@ -27,7 +27,7 @@ const products = [
         currentPrice: "$249.99",
         img: "images/All Products/Chair/Product_3.png",
         label: "Available",
-        category: "Chair",
+        category: "chair",
         tags: ["modern", "minimal", "lounge", "wood"]
     },
     {
@@ -36,7 +36,7 @@ const products = [
         currentPrice: "$329.99",
         img: "images/All Products/Chair/Product_4.jpg",
         label: "Sale",
-        category: "Chair",
+        category: "chair",
         tags: ["luxury", "leather", "brown", "accent"]
     },
     {
@@ -45,7 +45,7 @@ const products = [
         currentPrice: "$159.99",
         img: "images/All Products/Chair/Product_5.png",
         label: "Available",
-        category: "Chair",
+        category: "chair",
         tags: ["compact", "fabric", "beige", "modern"]
     },
     {
@@ -54,7 +54,7 @@ const products = [
         currentPrice: "$79.99",
         img: "images/All Products/Table/Product_1.jpg",
         label: "Available",
-        category: "Table",
+        category: "table",
         tags: ["coffee", "round", "modern", "white"]
     },
     {
@@ -63,7 +63,7 @@ const products = [
         currentPrice: "$119.99",
         img: "images/All Products/Table/Product_2.jpg",
         label: "Available",
-        category: "Table",
+        category: "table",
         tags: ["industrial", "wood", "rustic", "living-room"]
     },
     {
@@ -72,7 +72,7 @@ const products = [
         currentPrice: "$149.99",
         img: "images/All Products/Table/Product_3.png",
         label: "Sale",
-        category: "Table",
+        category: "table",
         tags: ["glass", "metal", "modern", "round"]
     },
     {
@@ -81,7 +81,7 @@ const products = [
         currentPrice: "$99.99",
         img: "images/All Products/Table/Product_4.jpg",
         label: "Available",
-        category: "Table",
+        category: "table",
         tags: ["scandinavian", "wood", "compact"]
     },
     {
@@ -90,7 +90,7 @@ const products = [
         currentPrice: "$259.99",
         img: "images/All Products/Sofa/Product_1.png",
         label: "Sale",
-        category: "Sofa",
+        category: "sofa",
         tags: ["modern", "compact", "grey", "sofa"]
     },
     {
@@ -99,7 +99,7 @@ const products = [
         currentPrice: "$499.99",
         img: "images/All Products/Sofa/Product_2.png",
         label: "Available",
-        category: "Sofa",
+        category: "sofa",
         tags: ["luxury", "velvet", "blue", "comfortable"]
     },
     {
@@ -108,7 +108,7 @@ const products = [
         currentPrice: "$349.99",
         img: "images/All Products/Sofa/Product_3.jpg",
         label: "Available",
-        category: "Sofa",
+        category: "sofa",
         tags: ["minimal", "two-seater", "modern", "light"]
     },
     {
@@ -117,7 +117,7 @@ const products = [
         currentPrice: "$429.99",
         img: "images/All Products/Sofa/Product_4.jpg",
         label: "Sale",
-        category: "Sofa",
+        category: "sofa",
         tags: ["family", "3-seater", "beige", "comfortable"]
     },
     {
@@ -126,7 +126,7 @@ const products = [
         currentPrice: "$360.99",
         img: "images/All Products/Bedroom/Product_1.jpg",
         label: "Available",
-        category: "Bedroom",
+        category: "bedroom",
         tags: ["fabric", "teal", "accent", "chair"]
     },
     {
@@ -135,7 +135,7 @@ const products = [
         currentPrice: "$129.99",
         img: "images/All Products/Bedroom/Product_2.jpg",
         label: "Available",
-        category: "Bedroom",
+        category: "bedroom",
         tags: ["wood", "bedside", "classic"]
     },
     {
@@ -144,7 +144,7 @@ const products = [
         currentPrice: "$599.99",
         img: "images/All Products/Bedroom/Product_3.png",
         label: "Sale",
-        category: "Bedroom",
+        category: "bedroom",
         tags: ["upholstered", "bed", "luxury", "fabric"]
     },
     {
@@ -153,7 +153,7 @@ const products = [
         currentPrice: "$149.99",
         img: "images/All Products/Bedroom/Product_4.jpg",
         label: "Available",
-        category: "Bedroom",
+        category: "bedroom",
         tags: ["minimal", "nightstand", "modern", "wood"]
     },
     {
@@ -162,7 +162,7 @@ const products = [
         currentPrice: "$129.99",
         img: "images/All Products/Chair/Product_13.png",
         label: "Sale",
-        category: "Chair",
+        category: "chair",
         tags: ["chair", "tufted", "wood", "beige", "fabric"]
     },
     {
@@ -171,7 +171,7 @@ const products = [
         currentPrice: "$199.99",
         img: "images/All Products/Table/Product_13.jpg",
         label: "Available",
-        category: "Table",
+        category: "table",
         tags: ["table", "round", "coffee", "glass", "modern"]
     },
     {
@@ -180,7 +180,7 @@ const products = [
         currentPrice: "$360.99",
         img: "images/All Products/Bedroom/Product_2.jpg",
         label: "Available",
-        category: "Bedroom",
+        category: "bedroom",
         tags: ["bedroom", "chair", "teal", "fabric", "accent"]
     },
     {
@@ -189,7 +189,7 @@ const products = [
         currentPrice: "$499.99",
         img: "images/All Products/Sofa/Product_6.jpg",
         label: "Sale",
-        category: "Sofa",
+        category: "sofa",
         tags: ["sofa", "modern", "grey", "compact"]
     },
     {
@@ -198,7 +198,7 @@ const products = [
         currentPrice: "$149.99",
         img: "images/All Products/Table/Product_12.jpg",
         label: "Available",
-        category: "Table",
+        category: "table",
         tags: ["table", "wood", "living-room", "coffee"]
     },
     {
@@ -207,7 +207,7 @@ const products = [
         currentPrice: "$239.99",
         img: "images/All Products/Chair/Product_14.png",
         label: "Sale",
-        category: "Chair",
+        category: "chair",
         tags: ["chair", "tufted", "brown", "classic", "wood"]
     },
     {
@@ -216,7 +216,7 @@ const products = [
         currentPrice: "$799.99",
         img: "images/All Products/Sofa/Product_8.jpg",
         label: "Available",
-        category: "Sofa",
+        category: "sofa",
         tags: ["sofa", "modern", "beige", "living-room"]
     }
 ];
@@ -348,3 +348,88 @@ filterBtn.addEventListener("click", () => {
     renderProducts(filtered);
 });
 
+/* ------------------------------------------------------------------ */
+/* =================== Filtering Data By Category =================== */
+/* ------------------------------------------------------------------ */
+
+document.querySelectorAll(".widget_categories a").forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const category = this.getAttribute("data-category");
+
+        let filteredProducts = category === "all"
+            ? products
+            : products.filter(p => p.category === category);
+
+        displayProducts(filteredProducts);
+    });
+});
+
+function displayProducts(items) {
+    const container = document.getElementById("productsRow");
+    container.innerHTML = "";
+
+    if (items.length === 0) {
+        container.innerHTML = "<p>No products found.</p>";
+        return;
+    }
+
+    items.forEach(p => {
+        container.innerHTML += `
+            <div class="col-md-3 mb-3">
+                <div class="product-card">
+                <img src="${p.img}" alt="${p.name}">
+                <h6>${p.name}</h6>
+                <p class="fw-bold">${p.currentPrice}</p>
+                ${p.label ? `<span class="badge">${p.label}</span>` : ""}
+                </div>
+            </div>
+        `;
+    });
+}
+
+displayProducts(products);
+
+/* ------------------------------------------------------------------ */
+/* ==================== Category Number of Data ===================== */
+/* ------------------------------------------------------------------ */
+
+function updateCategoryCounts(products) {
+    const counts = {};
+
+    products.forEach(product => {
+        const cat = product.category.toLowerCase();
+        counts[cat] = (counts[cat] || 0) + 1;
+    });
+
+    counts['all'] = products.length;
+
+    document.querySelectorAll(".widget_categories ul li a span").forEach(span => {
+        const cat = span.getAttribute("data-category");
+        span.textContent = counts[cat] || 0;
+    });
+}
+
+function filterProducts(category) {
+    products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+
+document.querySelectorAll('.widget_categories ul li a').forEach(cat => {
+    cat.addEventListener('click', e => {
+        e.preventDefault();
+        filterProducts(cat.dataset.category);
+    });
+});
+
+updateCategoryCounts(products);
+filterProducts('all');
+
+/* ------------------------------------------------------------------ */
+/* ===================== Filtering Data By Tag ====================== */
+/* ------------------------------------------------------------------ */

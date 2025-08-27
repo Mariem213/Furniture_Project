@@ -43,6 +43,8 @@
 	line-height: 94.3%;
 	text-transform: capitalize;
 	margin-bottom: 0;
+	color: #744312;
+	font-weight: 700;
 }
 
 .shop_widget_title.categories_title {
@@ -61,10 +63,10 @@
 	font-size: 18px;
 	line-height: 202.8%;
 	text-transform: capitalize;
-	color: #9f9f9f;
+	color: #ab6e35;
 }
 .widget_categories ul li a:hover {
-	color: #000000;
+	color: #8b4513;
 }
 
 .widget_proce_filter form input {

@@ -10,7 +10,8 @@ const products = [
         img: "images/All Products/Chair/Product_1.png",
         label: "Sale",
         category: "chair",
-        tags: ["tufted", "beige", "wood", "fabric"]
+        tags: ["tufted", "beige", "wood", "fabric"],
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
     },
     {
         id: 2,
@@ -19,7 +20,9 @@ const products = [
         img: "images/All Products/Chair/Product_2.png",
         label: "Available",
         category: "chair",
-        tags: ["classic", "fabric", "grey", "armchair"]
+        tags: ["classic", "fabric", "grey", "armchair"],
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+
     },
     {
         id: 3,
@@ -28,7 +31,9 @@ const products = [
         img: "images/All Products/Chair/Product_3.png",
         label: "Available",
         category: "chair",
-        tags: ["modern", "minimal", "lounge", "wood"]
+        tags: ["modern", "minimal", "lounge", "wood"],
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+
     },
     {
         id: 4,
@@ -37,7 +42,9 @@ const products = [
         img: "images/All Products/Chair/Product_4.jpg",
         label: "Sale",
         category: "chair",
-        tags: ["luxury", "leather", "brown", "accent"]
+        tags: ["luxury", "leather", "brown", "accent"],
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+
     },
     {
         id: 5,
@@ -46,7 +53,9 @@ const products = [
         img: "images/All Products/Chair/Product_5.png",
         label: "Available",
         category: "chair",
-        tags: ["compact", "fabric", "beige", "modern"]
+        tags: ["compact", "fabric", "beige", "modern"],
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+
     },
     {
         id: 6,
@@ -55,7 +64,9 @@ const products = [
         img: "images/All Products/Table/Product_1.jpg",
         label: "Available",
         category: "table",
-        tags: ["coffee", "round", "modern", "white"]
+        tags: ["coffee", "round", "modern", "white"],
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+
     },
     {
         id: 7,
@@ -64,7 +75,9 @@ const products = [
         img: "images/All Products/Table/Product_2.jpg",
         label: "Available",
         category: "table",
-        tags: ["industrial", "wood", "rustic", "living-room"]
+        tags: ["industrial", "wood", "rustic", "living-room"],
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+
     },
     {
         id: 8,
@@ -73,7 +86,9 @@ const products = [
         img: "images/All Products/Table/Product_3.png",
         label: "Sale",
         category: "table",
-        tags: ["glass", "metal", "modern", "round"]
+        tags: ["glass", "metal", "modern", "round"],
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+
     },
     {
         id: 9,
@@ -82,7 +97,9 @@ const products = [
         img: "images/All Products/Table/Product_4.jpg",
         label: "Available",
         category: "table",
-        tags: ["scandinavian", "wood", "compact"]
+        tags: ["scandinavian", "wood", "compact"],
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+
     },
     {
         id: 10,
@@ -91,7 +108,9 @@ const products = [
         img: "images/All Products/Sofa/Product_1.png",
         label: "Sale",
         category: "sofa",
-        tags: ["modern", "compact", "grey", "sofa"]
+        tags: ["modern", "compact", "grey", "sofa"],
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+
     },
     {
         id: 11,
@@ -221,29 +240,31 @@ const products = [
     }
 ];
 
-/* ------------------------------------------------------------------ */
-/* ======================= Shop Dynamic Data ======================== */
-/* ------------------------------------------------------------------ */
+if (window.location.pathname.includes("shop.html")) {
 
-function displayProducts(list) {
-    const productsContainer = document.getElementById("productsRow");
-    productsContainer.innerHTML = "";
+    /* ------------------------------------------------------------------ */
+    /* ======================= Shop Dynamic Data ======================== */
+    /* ------------------------------------------------------------------ */
 
-    list.forEach(p => {
-        const col = document.createElement("div");
-        col.className = "col-lg-4 col-md-4 col-sm-6";
+    function displayProducts(list) {
+        const productsContainer = document.getElementById("productsRow");
+        productsContainer.innerHTML = "";
 
-        col.innerHTML = `
+        list.forEach(p => {
+            const col = document.createElement("div");
+            col.className = "col-12 col-sm-6 col-md-4 col-lg-4";
+
+            col.innerHTML = `
             <article class="single_product product-card">
                 <figure>
                     <div class="product_thumb">
-                        <a href="single-product.html">
+                        <a href="single_product.html?id=${p.id}">
                             <img src="${p.img}" alt="${p.name}">
                         </a>
                         ${p.label ? `<div class="label_product"><span class="label_${p.label.toLowerCase()}">${p.label}</span></div>` : ""}
                     </div>
                     <figcaption class="product_content">
-                        <h4><a href="single-product.html">${p.name}</a></h4>
+                        <h4><a href="single_product.html?id=${p.id}">${p.name}</a></h4>
                         <div class="price_box">
                             <span class="current_price">${p.currentPrice}</span>
                         </div>
@@ -252,33 +273,37 @@ function displayProducts(list) {
             </article>
         `;
 
-        productsContainer.appendChild(col);
-    });
-}
+            productsContainer.appendChild(col);
+        });
+    }
 
-displayProducts(products);
+    // displayProducts(products);
 
-/* ------------------------------------------------------------------ */
-/* ========================= Sorting Data =========================== */
-/* ------------------------------------------------------------------ */
+    if (document.getElementById("productsRow")) {
+        displayProducts(products);
+    }
 
-const productRow = document.getElementById("productsRow");
+    /* ------------------------------------------------------------------ */
+    /* ========================= Sorting Data =========================== */
+    /* ------------------------------------------------------------------ */
 
-function renderProducts(products) {
-    productRow.innerHTML = "";
-    for (let p of products) {
-        const col = document.createElement("div");
-        col.className = "col-lg-4 col-md-4 col-sm-6";
+    const productRow = document.getElementById("productsRow");
 
-        col.innerHTML = `
+    function renderProducts(products) {
+        productRow.innerHTML = "";
+        for (let p of products) {
+            const col = document.createElement("div");
+            col.className = "col-12 col-sm-6 col-md-4 col-lg-4";
+
+            col.innerHTML = `
             <article class="single_product product-card">
                 <figure>
                     <div class="product_thumb">
-                        <a href="single-product.html"><img src="${p.img}" alt="${p.name}"></a>
+                        <a href="single_product.html?id=${p.id}"><img src="${p.img}" alt="${p.name}"></a>
                         ${p.label ? `<div class="label_product"><span class="label_${p.label.toLowerCase()}">${p.label}</span></div>` : ""}
                     </div>
                     <figcaption class="product_content">
-                        <h4><a href="single-product.html">${p.name}</a></h4>
+                        <h4><a href="single_product.html?id=${p.id}">${p.name}</a></h4>
                         <div class="price_box">
                             <span class="current_price">${p.currentPrice}</span>
                         </div>
@@ -286,157 +311,209 @@ function renderProducts(products) {
                 </figure>
             </article>
         `;
-        productRow.appendChild(col);
-    }
-}
-
-renderProducts(products);
-
-document.getElementById("sortProducts").addEventListener("change", function () {
-    let sortedProducts = [...products];
-    let value = this.value;
-
-    if (value === "low-high") {
-        sortedProducts.sort((a, b) => parseFloat(a.currentPrice.replace("$", "")) - parseFloat(b.currentPrice.replace("$", "")));
-    } else if (value === "high-low") {
-        sortedProducts.sort((a, b) => parseFloat(b.currentPrice.replace("$", "")) - parseFloat(a.currentPrice.replace("$", "")));
-    } else {
-        sortedProducts = [...products];
+            productRow.appendChild(col);
+        }
     }
 
-    renderProducts(sortedProducts);
-});
+    if (document.getElementById("productsRow")) {
+        // displayProducts(products);
+        renderProducts(products);
+    }
 
-/* ------------------------------------------------------------------ */
-/* ========================== Price Range =========================== */
-/* ------------------------------------------------------------------ */
+    document.getElementById("sortProducts").addEventListener("change", function () {
+        let sortedProducts = [...products];
+        let value = this.value;
 
-const rangeInput = document.getElementById('customRange4');
-const rangeOutput = document.getElementById('rangeValue');
+        if (value === "low-high") {
+            sortedProducts.sort((a, b) => parseFloat(a.currentPrice.replace("$", "")) - parseFloat(b.currentPrice.replace("$", "")));
+        } else if (value === "high-low") {
+            sortedProducts.sort((a, b) => parseFloat(b.currentPrice.replace("$", "")) - parseFloat(a.currentPrice.replace("$", "")));
+        } else {
+            sortedProducts = [...products];
+        }
 
-rangeOutput.textContent = rangeInput.value;
+        renderProducts(sortedProducts);
+    });
 
-rangeInput.addEventListener('input', function () {
-    rangeOutput.textContent = this.value;
-});
+    /* ------------------------------------------------------------------ */
+    /* ========================== Price Range =========================== */
+    /* ------------------------------------------------------------------ */
 
-/* ------------------------------------------------------------------ */
-/* ==================== Filtering Data By Price ===================== */
-/* ------------------------------------------------------------------ */
+    const rangeInput = document.getElementById('customRange4');
+    const rangeOutput = document.getElementById('rangeValue');
 
-const filterBtn = document.getElementById("filterBtn");
-
-rangeInput.addEventListener("input", () => {
     rangeOutput.textContent = rangeInput.value;
-});
 
-displayProducts(products);
-
-filterBtn.addEventListener("click", () => {
-    const maxPrice = parseFloat(rangeInput.value);
-    const filtered = products.filter(p => parseFloat(p.currentPrice.replace("$", "")) <= maxPrice);
-    renderProducts(filtered);
-});
-
-/* ------------------------------------------------------------------ */
-/* =================== Filtering Data By Category =================== */
-/* ------------------------------------------------------------------ */
-
-document.querySelectorAll(".widget_categories a").forEach(link => {
-    link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const category = this.getAttribute("data-category");
-
-        let filteredProducts = category === "all"
-            ? products
-            : products.filter(p => p.category === category);
-
-        displayProducts(filteredProducts);
-    });
-});
-
-displayProducts(products);
-
-/* ------------------------------------------------------------------ */
-/* ==================== Category Number of Data ===================== */
-/* ------------------------------------------------------------------ */
-
-function updateCategoryCounts(products) {
-    const counts = {};
-
-    products.forEach(product => {
-        const cat = product.category.toLowerCase();
-        counts[cat] = (counts[cat] || 0) + 1;
+    rangeInput.addEventListener('input', function () {
+        rangeOutput.textContent = this.value;
     });
 
-    counts['all'] = products.length;
+    /* ------------------------------------------------------------------ */
+    /* ==================== Filtering Data By Price ===================== */
+    /* ------------------------------------------------------------------ */
 
-    document.querySelectorAll(".widget_categories ul li a span").forEach(span => {
-        const cat = span.getAttribute("data-category");
-        span.textContent = counts[cat] || 0;
+    const filterBtn = document.getElementById("filterBtn");
+
+    rangeInput.addEventListener("input", () => {
+        rangeOutput.textContent = rangeInput.value;
     });
-}
 
-document.querySelectorAll('.widget_categories ul li a').forEach(cat => {
-    cat.addEventListener('click', e => {
-        e.preventDefault();
-        filterProducts(cat.dataset.category);
-    });
-});
-
-updateCategoryCounts(products);
-
-
-/* ------------------------------------------------------------------ */
-/* ========================= Pagination ============================= */
-/* ------------------------------------------------------------------ */
-
-let currentPage = 1;
-const productsPerPage = 12;
-const paginationContainer = document.getElementById("pagination");
-
-function renderPaginatedProducts(list, page = 1) {
-    const start = (page - 1) * productsPerPage;
-    const end = start + productsPerPage;
-    const paginatedItems = list.slice(start, end);
-
-    displayProducts(paginatedItems);
-    renderPaginationControls(list.length, page);
-}
-
-function renderPaginationControls(totalItems, currentPage) {
-    paginationContainer.innerHTML = "";
-    const totalPages = Math.ceil(totalItems / productsPerPage);
-
-    if (currentPage > 1) {
-        const prevBtn = document.createElement("button");
-        prevBtn.textContent = "Prev";
-        prevBtn.className = "btn nePrBTN btn-sm btn-outline-dark mx-1";
-        prevBtn.addEventListener("click", () => {
-            renderPaginatedProducts(products, currentPage - 1);
-        });
-        paginationContainer.appendChild(prevBtn);
+    // displayProducts(products);
+    if (document.getElementById("productsRow")) {
+        displayProducts(products);
     }
 
-    for (let i = 1; i <= totalPages; i++) {
-        const btn = document.createElement("button");
-        btn.textContent = i;
-        btn.className = `btn btn-sm mx-1 ${i === currentPage ? "btn-dark" : "btn-outline-dark"}`;
-        btn.addEventListener("click", () => {
-            renderPaginatedProducts(products, i);
+    filterBtn.addEventListener("click", () => {
+        const maxPrice = parseFloat(rangeInput.value);
+        const filtered = products.filter(p => parseFloat(p.currentPrice.replace("$", "")) <= maxPrice);
+        renderProducts(filtered);
+    });
+
+    /* ------------------------------------------------------------------ */
+    /* =================== Filtering Data By Category =================== */
+    /* ------------------------------------------------------------------ */
+
+    document.querySelectorAll(".widget_categories a").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const category = this.getAttribute("data-category");
+
+            let filteredProducts = category === "all"
+                ? products
+                : products.filter(p => p.category === category);
+
+            if (document.getElementById("productsRow")) {
+                // displayProducts(products);
+                displayProducts(filteredProducts);
+            }
         });
-        paginationContainer.appendChild(btn);
+    });
+
+    // displayProducts(products);
+    if (document.getElementById("productsRow")) {
+        displayProducts(products);
     }
 
-    if (currentPage < totalPages) {
-        const nextBtn = document.createElement("button");
-        nextBtn.textContent = "Next";
-        nextBtn.className = "btn nePrBTN btn-sm btn-outline-dark mx-1";
-        nextBtn.addEventListener("click", () => {
-            renderPaginatedProducts(products, currentPage + 1);
+    /* ------------------------------------------------------------------ */
+    /* ==================== Category Number of Data ===================== */
+    /* ------------------------------------------------------------------ */
+
+    function updateCategoryCounts(products) {
+        const counts = {};
+
+        products.forEach(product => {
+            const cat = product.category.toLowerCase();
+            counts[cat] = (counts[cat] || 0) + 1;
         });
-        paginationContainer.appendChild(nextBtn);
+
+        counts['all'] = products.length;
+
+        document.querySelectorAll(".widget_categories ul li a span").forEach(span => {
+            const cat = span.getAttribute("data-category");
+            span.textContent = counts[cat] || 0;
+        });
+    }
+
+    document.querySelectorAll('.widget_categories ul li a').forEach(cat => {
+        cat.addEventListener('click', e => {
+            e.preventDefault();
+            filterProducts(cat.dataset.category);
+        });
+    });
+
+    updateCategoryCounts(products);
+
+
+    /* ------------------------------------------------------------------ */
+    /* ========================= Pagination ============================= */
+    /* ------------------------------------------------------------------ */
+
+    let currentPage = 1;
+    const productsPerPage = 12;
+    const paginationContainer = document.getElementById("pagination");
+
+    function renderPaginatedProducts(list, page = 1) {
+        const start = (page - 1) * productsPerPage;
+        const end = start + productsPerPage;
+        const paginatedItems = list.slice(start, end);
+
+        if (document.getElementById("productsRow")) {
+            // displayProducts(products);
+            displayProducts(paginatedItems);
+        }
+        renderPaginationControls(list.length, page);
+    }
+
+    function renderPaginationControls(totalItems, currentPage) {
+        paginationContainer.innerHTML = "";
+        const totalPages = Math.ceil(totalItems / productsPerPage);
+
+        if (currentPage > 1) {
+            const prevBtn = document.createElement("button");
+            prevBtn.textContent = "Prev";
+            prevBtn.className = "btn nePrBTN btn-sm btn-outline-dark mx-1";
+            prevBtn.addEventListener("click", () => {
+                renderPaginatedProducts(products, currentPage - 1);
+            });
+            paginationContainer.appendChild(prevBtn);
+        }
+
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement("button");
+            btn.textContent = i;
+            btn.className = `btn btn-sm mx-1 ${i === currentPage ? "btn-dark" : "btn-outline-dark"}`;
+            btn.addEventListener("click", () => {
+                renderPaginatedProducts(products, i);
+            });
+            paginationContainer.appendChild(btn);
+        }
+
+        if (currentPage < totalPages) {
+            const nextBtn = document.createElement("button");
+            nextBtn.textContent = "Next";
+            nextBtn.className = "btn nePrBTN btn-sm btn-outline-dark mx-1";
+            nextBtn.addEventListener("click", () => {
+                renderPaginatedProducts(products, currentPage + 1);
+            });
+            paginationContainer.appendChild(nextBtn);
+        }
+    }
+
+    renderPaginatedProducts(products, currentPage);
+
+}
+/* ------------------------------------------------------------------ */
+/* ===================== Showing Product Details ==================== */
+/* ------------------------------------------------------------------ */
+
+function getProductIdFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return parseInt(params.get("id"));
+}
+
+function renderProductDetails() {
+    const productId = getProductIdFromURL();
+    const product = products.find(p => p.id === productId);
+
+    if (product) {
+        document.getElementById("productDetails").innerHTML = `
+        <article class="single_product product-card">
+            <div class="col-md-6">
+                <img src="${product.img}" class="img-fluid rounded" alt="${product.name}">
+            </div>
+            <div class="col-md-6">
+                <h2>${product.name}</h2>
+                <h4 class="text-success">${product.currentPrice}</h4>
+                <p>${product.description || "No description available."}</p>
+                <a href="shop.html" class="btn btn-secondary">Back to Products</a>
+            </div>
+        </article>
+    `;
+    } else {
+        document.getElementById("productDetails").innerHTML = `<p class="text-danger">Product not found.</p>`;
     }
 }
 
-renderPaginatedProducts(products, currentPage);
+if (window.location.pathname.includes("single_product.html")) {
+    renderProductDetails();
+}

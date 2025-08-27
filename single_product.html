@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav>
         <!--offcanvas menu area start-->
@@ -38,7 +39,7 @@
                                         <a href="index.html">About Us</a>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="#">Shop</a>
+                                        <a href="shop.html">Shop</a>
                                     </li>
                                     <li class="menu-item-has-children"><a href="index.html">Contact Us</a></li>
                                     <li class="menu-item-has-children"><a href="login_rigster.html">Logout</a></li>
@@ -66,7 +67,7 @@
                                         </li>
                                         <li><a class="nav-link" href="index.html">About Us</a>
                                         </li>
-                                        <li><a class="nav-link" href="#">Shop </a>
+                                        <li><a class="nav-link" href="shop.html">Shop </a>
                                         </li>
                                         <li><a class="nav-link" href="index.html">Contact Us</a></li>
                                     </ul>
@@ -188,123 +189,11 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <div class="hero">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-5">
-                    <div class="intro-excerpt">
-
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page">
-                                    <h1>Shop</h1>
-                                </li>
-                            </ol>
-                        </nav>
-
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">
-                                        <span>Home</span>
-                                    </a></li>
-                                <li class="breadcrumb-item active" aria-current="page">
-                                    <span>Shop</span>
-                                </li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+    <section style="opacity: 1;">
+        <div class="container py-5">
+            <div class="row" id="productDetails"></div>
         </div>
-    </div>
-
-    <!-- shop section -->
-    <div class="shop_page_section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="shop_page_inner d-flex ">
-                        <!-- Sidebar -->
-                        <div class="shop_sidebar_widget">
-                            <div class="shop_widget_list categories">
-                                <div class="shop_widget_title categories_title">
-                                    <h3>Categories</h3>
-                                </div>
-                                <div class="widget_categories">
-                                    <ul>
-                                        <li>
-                                            <a href="#" data-category="all">All (<span data-category="all"
-                                                    class="count">0</span>)</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-category="table">Table (<span data-category="table"
-                                                    class="count">0</span>)</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-category="bedroom">Bedroom (<span data-category="bedroom"
-                                                    class="count">0</span>)</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-category="chair">Chair (<span data-category="chair"
-                                                    class="count">0</span>)</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-category="sofa">Sofa (<span data-category="sofa"
-                                                    class="count">0</span>)</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="shop_widget_list">
-                                <div class="shop_widget_title">
-                                    <h3>by prices</h3>
-                                </div>
-                                <div class="widget_proce_filter">
-                                    <form action="#">
-                                        <span>Max Price: $<span id="rangeValue">100</span></span>
-                                        <input type="range" class="form-range" min="0" max="1000" value="500"
-                                            id="customRange4">
-
-                                        <button id="filterBtn">Filter Price</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="shop_widget_thumb">
-                                <img src="images/All Products/binner.png" alt="">
-                            </div>
-                        </div>
-
-                        <!-- Right side -->
-                        <div class="shop_right_sidaber">
-                            <div class="shop_top_bar d-flex justify-content-between">
-                                <div class="shop_product_count w-100 mb-4">
-
-                                </div>
-                                <div class="shop_top_right d-flex">
-                                    <div class="product_sorting">
-                                        <select id="sortProducts">
-                                            <option value="default" selected>Default Sorting</option>
-                                            <option value="low-high">Price: Low to High</option>
-                                            <option value="high-low">Price: High to Low</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="shop_gallery">
-                                <div class="row" id="productsRow"></div>
-                            </div>
-
-                            <div class="loding_bar mt-4">
-                                <ul id="pagination" class="d-flex justify-content-center"></ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer id="footer" class="pt-5">

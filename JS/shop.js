@@ -277,8 +277,6 @@ if (window.location.pathname.includes("shop.html")) {
         });
     }
 
-    // displayProducts(products);
-
     if (document.getElementById("productsRow")) {
         displayProducts(products);
     }
@@ -316,7 +314,6 @@ if (window.location.pathname.includes("shop.html")) {
     }
 
     if (document.getElementById("productsRow")) {
-        // displayProducts(products);
         renderProducts(products);
     }
 
@@ -358,7 +355,6 @@ if (window.location.pathname.includes("shop.html")) {
         rangeOutput.textContent = rangeInput.value;
     });
 
-    // displayProducts(products);
     if (document.getElementById("productsRow")) {
         displayProducts(products);
     }
@@ -383,13 +379,11 @@ if (window.location.pathname.includes("shop.html")) {
                 : products.filter(p => p.category === category);
 
             if (document.getElementById("productsRow")) {
-                // displayProducts(products);
                 displayProducts(filteredProducts);
             }
         });
     });
 
-    // displayProducts(products);
     if (document.getElementById("productsRow")) {
         displayProducts(products);
     }
@@ -438,7 +432,6 @@ if (window.location.pathname.includes("shop.html")) {
         const paginatedItems = list.slice(start, end);
 
         if (document.getElementById("productsRow")) {
-            // displayProducts(products);
             displayProducts(paginatedItems);
         }
         renderPaginationControls(list.length, page);
@@ -480,6 +473,19 @@ if (window.location.pathname.includes("shop.html")) {
     }
 
     renderPaginatedProducts(products, currentPage);
+
+    /* ------------------------------------------------------------------ */
+    /* ===================== Searching about Product ==================== */
+    /* ------------------------------------------------------------------ */
+
+    document.getElementById("searchInput").addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        const filteredProducts = products.filter(p =>
+            p.name.toLowerCase().includes(query)
+        );
+        currentPage = 1;
+        renderPaginatedProducts(filteredProducts, currentPage);
+    });
 
 }
 /* ------------------------------------------------------------------ */

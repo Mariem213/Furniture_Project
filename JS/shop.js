@@ -11,7 +11,7 @@ const products = [
         label: "Sale",
         category: "chair",
         tags: ["tufted", "beige", "wood", "fabric"],
-        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+        description: "Our chairs are designed to combine comfort and style, making them a perfect addition to any living or working space. Crafted from high-quality materials such as solid wood, metal, or premium plastic, they provide durability and long-lasting support. The ergonomic designs ensure proper posture, while the elegant finishes and modern aesthetics enhance the overall decor. Whether you need a cozy armchair for relaxing at home or a sleek office chair for productivity, our collection offers a variety of options to suit every taste and requirement."
     },
     {
         id: 2,
@@ -21,8 +21,7 @@ const products = [
         label: "Available",
         category: "chair",
         tags: ["classic", "fabric", "grey", "armchair"],
-        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
-
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room. Our chairs are designed to combine comfort and style, making them a perfect addition to any living or working space. Crafted from high-quality materials such as solid wood, metal, or premium plastic, they provide durability and long-lasting support. The ergonomic designs ensure proper posture, while the elegant finishes and modern aesthetics enhance the overall decor. Whether you need a cozy armchair for relaxing at home or a sleek office chair for productivity, our collection offers a variety of options to suit every taste and requirement."
     },
     {
         id: 3,
@@ -32,8 +31,7 @@ const products = [
         label: "Available",
         category: "chair",
         tags: ["modern", "minimal", "lounge", "wood"],
-        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
-
+        description: "Our chairs are designed to combine comfort and style, making them a perfect addition to any living or working space. Crafted from high-quality materials such as solid wood, metal, or premium plastic, they provide durability and long-lasting support. The ergonomic designs ensure proper posture, while the elegant finishes and modern aesthetics enhance the overall decor. Whether you need a cozy armchair for relaxing at home or a sleek office chair for productivity, our collection offers a variety of options to suit every taste and requirement. A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
     },
     {
         id: 4,
@@ -43,8 +41,7 @@ const products = [
         label: "Sale",
         category: "chair",
         tags: ["luxury", "leather", "brown", "accent"],
-        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
-
+        description: "Our chairs are designed to combine comfort and style, making them a perfect addition to any living or working space. Crafted from high-quality materials such as solid wood, metal, or premium plastic, they provide durability and long-lasting support. The ergonomic designs ensure proper posture, while the elegant finishes and modern aesthetics enhance the overall decor. Whether you need a cozy armchair for relaxing at home or a sleek office chair for productivity, our collection offers a variety of options to suit every taste and requirement. A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
     },
     {
         id: 5,
@@ -54,8 +51,7 @@ const products = [
         label: "Available",
         category: "chair",
         tags: ["compact", "fabric", "beige", "modern"],
-        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
-
+        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room. Our chairs are designed to combine comfort and style, making them a perfect addition to any living or working space. Crafted from high-quality materials such as solid wood, metal, or premium plastic, they provide durability and long-lasting support. The ergonomic designs ensure proper posture, while the elegant finishes and modern aesthetics enhance the overall decor. Whether you need a cozy armchair for relaxing at home or a sleek office chair for productivity, our collection offers a variety of options to suit every taste and requirement."
     },
     {
         id: 6,
@@ -65,8 +61,7 @@ const products = [
         label: "Available",
         category: "table",
         tags: ["coffee", "round", "modern", "white"],
-        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
-
+        description: "Our tables are the centerpiece of functionality and elegance, available in various sizes, shapes, and materials to meet all your needs. From sturdy wooden dining tables that create a warm family gathering space to stylish coffee tables that add charm to your living room, every piece is crafted with attention to detail. The smooth surfaces, durable finishes, and practical designs ensure both beauty and longevity. Whether for dining, work, or leisure, our tables combine practicality with sophisticated style."
     },
     {
         id: 7,
@@ -76,7 +71,7 @@ const products = [
         label: "Available",
         category: "table",
         tags: ["industrial", "wood", "rustic", "living-room"],
-        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+        description: "Our tables are the centerpiece of functionality and elegance, available in various sizes, shapes, and materials to meet all your needs. From sturdy wooden dining tables that create a warm family gathering space to stylish coffee tables that add charm to your living room, every piece is crafted with attention to detail. The smooth surfaces, durable finishes, and practical designs ensure both beauty and longevity. Whether for dining, work, or leisure, our tables combine practicality with sophisticated style."
 
     },
     {
@@ -87,8 +82,7 @@ const products = [
         label: "Sale",
         category: "table",
         tags: ["glass", "metal", "modern", "round"],
-        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
-
+        description: "Our tables are the centerpiece of functionality and elegance, available in various sizes, shapes, and materials to meet all your needs. From sturdy wooden dining tables that create a warm family gathering space to stylish coffee tables that add charm to your living room, every piece is crafted with attention to detail. The smooth surfaces, durable finishes, and practical designs ensure both beauty and longevity. Whether for dining, work, or leisure, our tables combine practicality with sophisticated style."
     },
     {
         id: 9,
@@ -98,8 +92,7 @@ const products = [
         label: "Available",
         category: "table",
         tags: ["scandinavian", "wood", "compact"],
-        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
-
+        description: "Our tables are the centerpiece of functionality and elegance, available in various sizes, shapes, and materials to meet all your needs. From sturdy wooden dining tables that create a warm family gathering space to stylish coffee tables that add charm to your living room, every piece is crafted with attention to detail. The smooth surfaces, durable finishes, and practical designs ensure both beauty and longevity. Whether for dining, work, or leisure, our tables combine practicality with sophisticated style."
     },
     {
         id: 10,
@@ -109,7 +102,7 @@ const products = [
         label: "Sale",
         category: "sofa",
         tags: ["modern", "compact", "grey", "sofa"],
-        description: "A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
+        description: "Our sofas provide ultimate comfort and timeless elegance, perfect for both modern and classic interiors. Upholstered in soft fabrics or premium leather, they are designed to offer maximum relaxation without compromising on style. With supportive cushions, durable frames, and versatile designs, these sofas accommodate everything from daily lounging to entertaining guests. Available in a wide range of colors, sizes, and styles, our sofas can complement any living space and create a welcoming atmosphere."
 
     },
     {
@@ -119,7 +112,8 @@ const products = [
         img: "images/All Products/Sofa/Product_2.png",
         label: "Available",
         category: "sofa",
-        tags: ["luxury", "velvet", "blue", "comfortable"]
+        tags: ["luxury", "velvet", "blue", "comfortable"],
+        description: "Our sofas provide ultimate comfort and timeless elegance, perfect for both modern and classic interiors. Upholstered in soft fabrics or premium leather, they are designed to offer maximum relaxation without compromising on style. With supportive cushions, durable frames, and versatile designs, these sofas accommodate everything from daily lounging to entertaining guests. Available in a wide range of colors, sizes, and styles, our sofas can complement any living space and create a welcoming atmosphere."
     },
     {
         id: 12,
@@ -128,7 +122,8 @@ const products = [
         img: "images/All Products/Sofa/Product_3.jpg",
         label: "Available",
         category: "sofa",
-        tags: ["minimal", "two-seater", "modern", "light"]
+        tags: ["minimal", "two-seater", "modern", "light"],
+        description: "Our sofas provide ultimate comfort and timeless elegance, perfect for both modern and classic interiors. Upholstered in soft fabrics or premium leather, they are designed to offer maximum relaxation without compromising on style. With supportive cushions, durable frames, and versatile designs, these sofas accommodate everything from daily lounging to entertaining guests. Available in a wide range of colors, sizes, and styles, our sofas can complement any living space and create a welcoming atmosphere."
     },
     {
         id: 13,
@@ -137,7 +132,8 @@ const products = [
         img: "images/All Products/Sofa/Product_4.jpg",
         label: "Sale",
         category: "sofa",
-        tags: ["family", "3-seater", "beige", "comfortable"]
+        tags: ["family", "3-seater", "beige", "comfortable"],
+        description: "Our sofas provide ultimate comfort and timeless elegance, perfect for both modern and classic interiors. Upholstered in soft fabrics or premium leather, they are designed to offer maximum relaxation without compromising on style. With supportive cushions, durable frames, and versatile designs, these sofas accommodate everything from daily lounging to entertaining guests. Available in a wide range of colors, sizes, and styles, our sofas can complement any living space and create a welcoming atmosphere."
     },
     {
         id: 14,
@@ -146,7 +142,8 @@ const products = [
         img: "images/All Products/Bedroom/Product_1.jpg",
         label: "Available",
         category: "bedroom",
-        tags: ["fabric", "teal", "accent", "chair"]
+        tags: ["fabric", "teal", "accent", "chair"],
+        description: "Our beds are designed for restful sleep and luxurious comfort, making every night a rejuvenating experience. Built with sturdy frames, high-quality materials, and stylish headboards, they ensure both durability and aesthetic appeal. The mattresses are ergonomically designed to provide proper support and align your spine for healthy sleep. Available in various sizes, from single to king-size, and a variety of styles, our beds suit any bedroom decor, combining elegance, functionality, and superior comfort."
     },
     {
         id: 15,
@@ -155,7 +152,8 @@ const products = [
         img: "images/All Products/Bedroom/Product_2.jpg",
         label: "Available",
         category: "bedroom",
-        tags: ["wood", "bedside", "classic"]
+        tags: ["wood", "bedside", "classic"],
+        description: "Our beds are designed for restful sleep and luxurious comfort, making every night a rejuvenating experience. Built with sturdy frames, high-quality materials, and stylish headboards, they ensure both durability and aesthetic appeal. The mattresses are ergonomically designed to provide proper support and align your spine for healthy sleep. Available in various sizes, from single to king-size, and a variety of styles, our beds suit any bedroom decor, combining elegance, functionality, and superior comfort."
     },
     {
         id: 16,
@@ -164,7 +162,8 @@ const products = [
         img: "images/All Products/Bedroom/Product_3.png",
         label: "Sale",
         category: "bedroom",
-        tags: ["upholstered", "bed", "luxury", "fabric"]
+        tags: ["upholstered", "bed", "luxury", "fabric"],
+        description: "Our beds are designed for restful sleep and luxurious comfort, making every night a rejuvenating experience. Built with sturdy frames, high-quality materials, and stylish headboards, they ensure both durability and aesthetic appeal. The mattresses are ergonomically designed to provide proper support and align your spine for healthy sleep. Available in various sizes, from single to king-size, and a variety of styles, our beds suit any bedroom decor, combining elegance, functionality, and superior comfort."
     },
     {
         id: 17,
@@ -173,7 +172,8 @@ const products = [
         img: "images/All Products/Bedroom/Product_4.jpg",
         label: "Available",
         category: "bedroom",
-        tags: ["minimal", "nightstand", "modern", "wood"]
+        tags: ["minimal", "nightstand", "modern", "wood"],
+        description: "Our beds are designed for restful sleep and luxurious comfort, making every night a rejuvenating experience. Built with sturdy frames, high-quality materials, and stylish headboards, they ensure both durability and aesthetic appeal. The mattresses are ergonomically designed to provide proper support and align your spine for healthy sleep. Available in various sizes, from single to king-size, and a variety of styles, our beds suit any bedroom decor, combining elegance, functionality, and superior comfort."
     },
     {
         id: 18,
@@ -182,7 +182,8 @@ const products = [
         img: "images/All Products/Chair/Product_13.png",
         label: "Sale",
         category: "chair",
-        tags: ["chair", "tufted", "wood", "beige", "fabric"]
+        tags: ["chair", "tufted", "wood", "beige", "fabric"],
+        description: "Our chairs are designed to combine comfort and style, making them a perfect addition to any living or working space. Crafted from high-quality materials such as solid wood, metal, or premium plastic, they provide durability and long-lasting support. The ergonomic designs ensure proper posture, while the elegant finishes and modern aesthetics enhance the overall decor. Whether you need a cozy armchair for relaxing at home or a sleek office chair for productivity, our collection offers a variety of options to suit every taste and requirement. A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
     },
     {
         id: 19,
@@ -191,7 +192,8 @@ const products = [
         img: "images/All Products/Table/Product_13.jpg",
         label: "Available",
         category: "table",
-        tags: ["table", "round", "coffee", "glass", "modern"]
+        tags: ["table", "round", "coffee", "glass", "modern"],
+        description: "Our tables are the centerpiece of functionality and elegance, available in various sizes, shapes, and materials to meet all your needs. From sturdy wooden dining tables that create a warm family gathering space to stylish coffee tables that add charm to your living room, every piece is crafted with attention to detail. The smooth surfaces, durable finishes, and practical designs ensure both beauty and longevity. Whether for dining, work, or leisure, our tables combine practicality with sophisticated style."
     },
     {
         id: 20,
@@ -200,7 +202,8 @@ const products = [
         img: "images/All Products/Bedroom/Product_2.jpg",
         label: "Available",
         category: "bedroom",
-        tags: ["bedroom", "chair", "teal", "fabric", "accent"]
+        tags: ["bedroom", "chair", "teal", "fabric", "accent"],
+        description: "Our beds are designed for restful sleep and luxurious comfort, making every night a rejuvenating experience. Built with sturdy frames, high-quality materials, and stylish headboards, they ensure both durability and aesthetic appeal. The mattresses are ergonomically designed to provide proper support and align your spine for healthy sleep. Available in various sizes, from single to king-size, and a variety of styles, our beds suit any bedroom decor, combining elegance, functionality, and superior comfort."
     },
     {
         id: 21,
@@ -209,7 +212,8 @@ const products = [
         img: "images/All Products/Sofa/Product_6.jpg",
         label: "Sale",
         category: "sofa",
-        tags: ["sofa", "modern", "grey", "compact"]
+        tags: ["sofa", "modern", "grey", "compact"],
+        description: "Our sofas provide ultimate comfort and timeless elegance, perfect for both modern and classic interiors. Upholstered in soft fabrics or premium leather, they are designed to offer maximum relaxation without compromising on style. With supportive cushions, durable frames, and versatile designs, these sofas accommodate everything from daily lounging to entertaining guests. Available in a wide range of colors, sizes, and styles, our sofas can complement any living space and create a welcoming atmosphere."
     },
     {
         id: 22,
@@ -218,7 +222,8 @@ const products = [
         img: "images/All Products/Table/Product_12.jpg",
         label: "Available",
         category: "table",
-        tags: ["table", "wood", "living-room", "coffee"]
+        tags: ["table", "wood", "living-room", "coffee"],
+        description: "Our tables are the centerpiece of functionality and elegance, available in various sizes, shapes, and materials to meet all your needs. From sturdy wooden dining tables that create a warm family gathering space to stylish coffee tables that add charm to your living room, every piece is crafted with attention to detail. The smooth surfaces, durable finishes, and practical designs ensure both beauty and longevity. Whether for dining, work, or leisure, our tables combine practicality with sophisticated style."
     },
     {
         id: 23,
@@ -227,7 +232,8 @@ const products = [
         img: "images/All Products/Chair/Product_14.png",
         label: "Sale",
         category: "chair",
-        tags: ["chair", "tufted", "brown", "classic", "wood"]
+        tags: ["chair", "tufted", "brown", "classic", "wood"],
+        description: "Our chairs are designed to combine comfort and style, making them a perfect addition to any living or working space. Crafted from high-quality materials such as solid wood, metal, or premium plastic, they provide durability and long-lasting support. The ergonomic designs ensure proper posture, while the elegant finishes and modern aesthetics enhance the overall decor. Whether you need a cozy armchair for relaxing at home or a sleek office chair for productivity, our collection offers a variety of options to suit every taste and requirement. A comfy beige tufted chair with stylish wooden legs. Perfect for any living room."
     },
     {
         id: 24,
@@ -236,7 +242,8 @@ const products = [
         img: "images/All Products/Sofa/Product_8.jpg",
         label: "Available",
         category: "sofa",
-        tags: ["sofa", "modern", "beige", "living-room"]
+        tags: ["sofa", "modern", "beige", "living-room"],
+        description: "Our sofas provide ultimate comfort and timeless elegance, perfect for both modern and classic interiors. Upholstered in soft fabrics or premium leather, they are designed to offer maximum relaxation without compromising on style. With supportive cushions, durable frames, and versatile designs, these sofas accommodate everything from daily lounging to entertaining guests. Available in a wide range of colors, sizes, and styles, our sofas can complement any living space and create a welcoming atmosphere."
     }
 ];
 
@@ -504,14 +511,25 @@ function renderProductDetails() {
     if (product) {
         document.getElementById("productDetails").innerHTML = `
         <article class="single_product product-card">
-            <div class="col-md-6">
-                <img src="${product.img}" class="img-fluid rounded" alt="${product.name}">
+            <div class="col-12 col-md-6 mb-5 mx-5 mx-md-0">
+                <img src="${product.img}" class="rounded" alt="${product.name}">
             </div>
-            <div class="col-md-6">
+            <div class="col-12 col-md-6 mx-3 mx-md-0 text-center">
                 <h2>${product.name}</h2>
-                <h4 class="text-success">${product.currentPrice}</h4>
                 <p>${product.description || "No description available."}</p>
-                <a href="shop.html" class="btn btn-secondary">Back to Products</a>
+                <div class="product-card-title col-6">
+                    <span class="label">${product.label}</span>
+                    <div class="mt-1">
+                        <h4>${product.currentPrice}</h4>
+                    </div>
+                </div>
+                <span class="tags d-block my-5">
+                    ${product.tags.map(tag => `<span class="tag-item">${tag}</span>`).join(" ")}
+                </span>
+                <div class="d-lg-flex justify-content-center">
+                    <a href="shop.html" class="btn mx-4 my-3 my-md-0">Back to Products</a>
+                    <a href="cart.html" class="btn mx-4">Add to Cart</a>
+                </div>
             </div>
         </article>
     `;

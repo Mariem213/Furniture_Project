@@ -539,10 +539,6 @@ function renderProductDetails() {
     }
 }
 
-// if (window.location.pathname.includes("single_product.html")) {
-//     renderProductDetails();
-// }
-
 if (window.location.pathname.includes("single_product.html")) {
     renderProductDetails();
 

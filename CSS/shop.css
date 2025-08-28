@@ -39,7 +39,7 @@
 
 .shop_widget_title h3 {
 	font-weight: normal;
-	font-size: 24px;
+	font-size: 2rem;
 	line-height: 94.3%;
 	text-transform: capitalize;
 	margin-bottom: 0;
@@ -51,8 +51,21 @@
 	margin-bottom: 42px;
 }
 
+.widget_categories {
+	width: 100%;
+}
+
+.widget_categories ul {
+	width: 100%;
+}
+
 .widget_categories ul li {
 	margin-bottom: 37px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 .widget_categories ul li:last-child {
 	margin-bottom: 0;
@@ -60,12 +73,26 @@
 
 .widget_categories ul li a {
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 1.2rem;
 	line-height: 202.8%;
 	text-transform: capitalize;
 	color: #ab6e35;
+	background: #eee;
+	padding: 0.5rem 2rem;
+	border-radius: 10px;
+	width: 100%;
+	text-align: center;
 }
 .widget_categories ul li a:hover {
+	color: #8b4513;
+}
+
+.widget_proce_filter form {
+	text-align: center;
+}
+
+.widget_proce_filter form span {
+	font-size: 1.1rem;
 	color: #8b4513;
 }
 
@@ -80,8 +107,10 @@
 }
 .widget_proce_filter form button {
 	font-weight: 500;
-	font-size: 10px;
-	width: 115px;
+	font-size: 1rem;
+	font-weight: 700;
+	color: #8b4513;
+	width: 50%;
 	height: 35px;
 	line-height: 33px;
 	text-align: center;
@@ -89,6 +118,11 @@
 	background: #ffffff;
 	margin-top: 40px;
 	text-transform: uppercase;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 }
 .widget_proce_filter form button:hover {
 	color: #ab6e35;

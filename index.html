@@ -88,9 +88,10 @@
                                                 <i class="bi bi-search"></i>
                                             </a>
                                         </li>
-                                        <li class="shopping_cart">
-                                            <a href="#">
+                                        <li class="shopping_cart" id="cartIcon">
+                                            <a href="cart.html">
                                                 <i class="bi bi-cart"></i>
+                                                <span id="cart-count" class="badge bg-danger">0</span>
                                             </a>
                                         </li>
                                         <li class="account_link_menu" id="navUserIcon">
@@ -112,64 +113,6 @@
                 </div>
             </div>
         </header>
-
-        <!--mini cart-->
-        <div class="mini_cart">
-            <div class="cart_gallery">
-                <div class="cart_close">
-                    <div class="cart_text">
-                        <h3>cart</h3>
-                    </div>
-                    <div class="mini_cart_close">
-                        <a><i class="bi bi-x-circle"></i></a>
-                    </div>
-                </div>
-                <div class="cart_item">
-                    <div class="cart_img">
-                        <a href="#"><img src="images/Product_1.png" alt=""></a>
-                    </div>
-                    <div class="cart_info">
-                        <a href="#">Primis In Faucibus</a>
-                        <p>1 x <span> $65.00 </span></p>
-                    </div>
-                    <div class="cart_remove">
-                        <a href="#"><i class="bi bi-x icon-close icons"></i></a>
-                    </div>
-                </div>
-                <div class="cart_item">
-                    <div class="cart_img">
-                        <a href="#"><img src="images/Product_2.png" alt=""></a>
-                    </div>
-                    <div class="cart_info">
-                        <a href="#">Letraset Sheets</a>
-                        <p>1 x <span> $60.00 </span></p>
-                    </div>
-                    <div class="cart_remove">
-                        <a href="#"><i class="bi bi-x icon-close icons"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="mini_cart_table">
-                <div class="cart_table_border">
-                    <div class="cart_total">
-                        <span>Sub total:</span>
-                        <span class="price">$125.00</span>
-                    </div>
-                    <div class="cart_total mt-10">
-                        <span>total:</span>
-                        <span class="price">$125.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="mini_cart_footer">
-                <div class="cart_button">
-                    <a href="cart.html"><i class="bi bi-cart"></i> View cart</a>
-                </div>
-                <div class="cart_button">
-                    <a href="checkout.html"><i class="bi bi-box-arrow-in-right"></i> Checkout</a>
-                </div>
-            </div>
-        </div>
 
         <!-- Search Modal -->
         <div class="modal fade" id="searchModal">
@@ -230,33 +173,33 @@
                 </div>
 
                 <div class="col-12 col-md-4 col-lg-3 mb-5">
-                    <a class="product-item" href="cart.html">
+                    <a class="product-item" href="shop.html">
                         <img src="images/Product_1.png" class="img-fluid product-thumbnail">
                         <h3 class="product-title">Nordic Chair</h3>
                         <strong class="product-price">$50.00</strong>
-                        <span class="icon-cross">
+                        <span class="icon-cross add-to-cart">
                             <i class="bi bi-plus text-white"></i>
                         </span>
                     </a>
                 </div>
 
                 <div class="col-12 col-md-4 col-lg-3 mb-5">
-                    <a class="product-item" href="cart.html">
+                    <a class="product-item" href="shop.html">
                         <img src="images/Product_2.png" class="img-fluid product-thumbnail">
                         <h3 class="product-title">Kruzo Aero Chair</h3>
                         <strong class="product-price">$78.00</strong>
-                        <span class="icon-cross">
+                        <span class="icon-cross add-to-cart">
                             <i class="bi bi-plus text-white"></i>
                         </span>
                     </a>
                 </div>
 
                 <div class="col-12 col-md-4 col-lg-3 mb-5">
-                    <a class="product-item" href="cart.html">
+                    <a class="product-item" href="shop.html">
                         <img src="images/Product_3.png" class="img-fluid product-thumbnail">
                         <h3 class="product-title">Ergonomic Chair</h3>
                         <strong class="product-price">$43.00</strong>
-                        <span class="icon-cross">
+                        <span class="icon-cross add-to-cart">
                             <i class="bi bi-plus text-white"></i>
                         </span>
                     </a>
@@ -722,6 +665,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jarallax@2.0/dist/jarallax.min.js"></script>
 
     <script src="JS/main.js"></script>
+    <script src="JS/cart.js"></script>
 </body>
 
 </html>

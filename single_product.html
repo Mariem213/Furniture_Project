@@ -41,8 +41,12 @@
                                     <li class="menu-item-has-children">
                                         <a href="shop.html">Shop</a>
                                     </li>
-                                    <li class="menu-item-has-children"><a href="index.html">Contact Us</a></li>
-                                    <li class="menu-item-has-children"><a href="login_rigster.html">Logout</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="index.html">Contact Us</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="login_rigster.html">Logout</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -83,8 +87,9 @@
                                             </a>
                                         </li>
                                         <li class="shopping_cart">
-                                            <a href="#">
+                                            <a href="cart.html">
                                                 <i class="bi bi-cart"></i>
+                                                <span id="cart-count" class="badge bg-danger">0</span>
                                             </a>
                                         </li>
                                         <li class="account_link_menu" id="navUserIcon">
@@ -106,64 +111,6 @@
                 </div>
             </div>
         </header>
-
-        <!--mini cart-->
-        <div class="mini_cart">
-            <div class="cart_gallery">
-                <div class="cart_close">
-                    <div class="cart_text">
-                        <h3>cart</h3>
-                    </div>
-                    <div class="mini_cart_close">
-                        <a><i class="bi bi-x-circle"></i></a>
-                    </div>
-                </div>
-                <div class="cart_item">
-                    <div class="cart_img">
-                        <a href="#"><img src="images/Product_1.png" alt=""></a>
-                    </div>
-                    <div class="cart_info">
-                        <a href="#">Primis In Faucibus</a>
-                        <p>1 x <span> $65.00 </span></p>
-                    </div>
-                    <div class="cart_remove">
-                        <a href="#"><i class="bi bi-x icon-close icons"></i></a>
-                    </div>
-                </div>
-                <div class="cart_item">
-                    <div class="cart_img">
-                        <a href="#"><img src="images/Product_2.png" alt=""></a>
-                    </div>
-                    <div class="cart_info">
-                        <a href="#">Letraset Sheets</a>
-                        <p>1 x <span> $60.00 </span></p>
-                    </div>
-                    <div class="cart_remove">
-                        <a href="#"><i class="bi bi-x icon-close icons"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="mini_cart_table">
-                <div class="cart_table_border">
-                    <div class="cart_total">
-                        <span>Sub total:</span>
-                        <span class="price">$125.00</span>
-                    </div>
-                    <div class="cart_total mt-10">
-                        <span>total:</span>
-                        <span class="price">$125.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="mini_cart_footer">
-                <div class="cart_button">
-                    <a href="cart.html"><i class="bi bi-cart"></i> View cart</a>
-                </div>
-                <div class="cart_button">
-                    <a href="checkout.html"><i class="bi bi-box-arrow-in-right"></i> Checkout</a>
-                </div>
-            </div>
-        </div>
 
         <!-- Search Modal -->
         <div class="modal fade" id="searchModal">
@@ -267,6 +214,7 @@
 
     <script src="JS/main.js"></script>
     <script src="JS/shop.js"></script>
+    <script src="JS/cart.js"></script>
 </body>
 
 </html>

@@ -495,6 +495,7 @@ if (window.location.pathname.includes("shop.html")) {
     });
 
 }
+
 /* ------------------------------------------------------------------ */
 /* ===================== Showing Product Details ==================== */
 /* ------------------------------------------------------------------ */
@@ -528,7 +529,7 @@ function renderProductDetails() {
                 </span>
                 <div class="d-lg-flex justify-content-center">
                     <a href="shop.html" class="btn mx-4 my-3 my-md-0">Back to Products</a>
-                    <a href="cart.html" class="btn mx-4">Add to Cart</a>
+                    <button href="cart.html" id="addToCartBtn" class="btn mx-4 add-to-cart"> Add to Cart </button>
                 </div>
             </div>
         </article>
@@ -538,6 +539,38 @@ function renderProductDetails() {
     }
 }
 
+// if (window.location.pathname.includes("single_product.html")) {
+//     renderProductDetails();
+// }
+
 if (window.location.pathname.includes("single_product.html")) {
     renderProductDetails();
+
+    const productId = getProductIdFromURL();
+    const product = products.find(p => p.id === productId);
+
+    document.addEventListener("click", function (e) {
+        if (e.target && e.target.id === "addToCartBtn") {
+            addToCart(product);
+        }
+    });
+}
+
+/* ------------------------------------------------------------------ */
+/* ========================== Add To Cart =========================== */
+/* ------------------------------------------------------------------ */
+
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const priceNumber = Number(String(product.currentPrice).replace(/[^0-9.-]+/g, '')) || 0;
+
+    const existing = cart.find(item => item.id === product.id);
+    if (existing) {
+        existing.quantity = Number(existing.quantity || 0) + 1;
+    } else {
+        cart.push({ id: product.id, name: product.name, img: product.img, currentPrice: product.currentPrice, priceNumber, quantity: 1 });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    window.location.href = "cart.html";
 }

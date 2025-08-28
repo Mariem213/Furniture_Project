@@ -1,19 +1,4 @@
 /* ------------------------------------------------------------------ */
-/* ========================= Shopping Cart ========================== */
-/* ------------------------------------------------------------------ */
-
-document.querySelector('.shopping_cart > a').addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelector('.mini_cart').classList.add('active');
-    document.querySelector('.body_overlay').classList.add('active');
-});
-
-document.querySelector('.mini_cart_close a').addEventListener('click', () => {
-    document.querySelector('.mini_cart').classList.remove('active');
-    document.querySelector('.body_overlay').classList.remove('active');
-});
-
-/* ------------------------------------------------------------------ */
 /* =========================== Search Box =========================== */
 /* ------------------------------------------------------------------ */
 

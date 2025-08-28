@@ -80,9 +80,10 @@
                                                 <i class="bi bi-search"></i>
                                             </a>
                                         </li>
-                                        <li class="shopping_cart">
+                                        <li class="shopping_cart" id="cartIcon">
                                             <a href="#">
                                                 <i class="bi bi-cart"></i>
+                                                <span id="cart-count" class="badge bg-danger">0</span>
                                             </a>
                                         </li>
                                         <li class="account_link_menu" id="navUserIcon">
@@ -104,64 +105,6 @@
                 </div>
             </div>
         </header>
-
-        <!--mini cart-->
-        <div class="mini_cart">
-            <div class="cart_gallery">
-                <div class="cart_close">
-                    <div class="cart_text">
-                        <h3>cart</h3>
-                    </div>
-                    <div class="mini_cart_close">
-                        <a><i class="bi bi-x-circle"></i></a>
-                    </div>
-                </div>
-                <div class="cart_item">
-                    <div class="cart_img">
-                        <a href="#"><img src="images/Product_1.png" alt=""></a>
-                    </div>
-                    <div class="cart_info">
-                        <a href="#">Primis In Faucibus</a>
-                        <p>1 x <span> $65.00 </span></p>
-                    </div>
-                    <div class="cart_remove">
-                        <a href="#"><i class="bi bi-x icon-close icons"></i></a>
-                    </div>
-                </div>
-                <div class="cart_item">
-                    <div class="cart_img">
-                        <a href="#"><img src="images/Product_2.png" alt=""></a>
-                    </div>
-                    <div class="cart_info">
-                        <a href="#">Letraset Sheets</a>
-                        <p>1 x <span> $60.00 </span></p>
-                    </div>
-                    <div class="cart_remove">
-                        <a href="#"><i class="bi bi-x icon-close icons"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="mini_cart_table">
-                <div class="cart_table_border">
-                    <div class="cart_total">
-                        <span>Sub total:</span>
-                        <span class="price">$125.00</span>
-                    </div>
-                    <div class="cart_total mt-10">
-                        <span>total:</span>
-                        <span class="price">$125.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="mini_cart_footer">
-                <div class="cart_button">
-                    <a href="#"><i class="bi bi-cart"></i> View cart</a>
-                </div>
-                <div class="cart_button">
-                    <a href="checkout.html"><i class="bi bi-box-arrow-in-right"></i> Checkout</a>
-                </div>
-            </div>
-        </div>
 
         <!-- Search Modal -->
         <div class="modal fade" id="searchModal">
@@ -227,67 +170,7 @@
                                     <th class="product-remove">Remove</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="product-image">
-                                        <img src="images/Product_1.png" alt="Image" class="img-fluid">
-                                    </td>
-                                    <td class="product-name">
-                                        <h2 class="h5 text-black">Product 1</h2>
-                                    </td>
-                                    <td>$49.00</td>
-                                    <td class="num">
-                                        <div class="input-group mb-3 quantity-container">
-                                            <div class="input-group-prepend">
-                                                <button class="iconbtn btn-outline-black decrease"
-                                                    type="button">&minus;</button>
-                                            </div>
-                                            <input type="text" class="form-control text-center quantity-amount"
-                                                value="1" placeholder="" aria-describedby="button-addon1">
-                                            <div class="input-group-append">
-                                                <button class="iconbtn btn-outline-black increase"
-                                                    type="button">&plus;</button>
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                    <td>$49.00</td>
-                                    <td class="removeItem">
-                                        <a href="#" class="iconbtn btn-black btn-sm">
-                                            <i class="bi bi-x-circle-fill"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="product-image">
-                                        <img src="images/Product_2.png" alt="Image" class="img-fluid">
-                                    </td>
-                                    <td class="product-name">
-                                        <h2 class="h5 text-black">Product 2</h2>
-                                    </td>
-                                    <td>$49.00</td>
-                                    <td class="num">
-                                        <div class="input-group mb-3 quantity-container">
-                                            <div class="input-group-prepend">
-                                                <button class="iconbtn btn-outline-black decrease"
-                                                    type="button">&minus;</button>
-                                            </div>
-                                            <input type="text" class="form-control text-center quantity-amount"
-                                                value="1" placeholder="" aria-describedby="button-addon1">
-                                            <div class="input-group-append">
-                                                <button class="iconbtn btn-outline-black increase"
-                                                    type="button">&plus;</button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>$49.00</td>
-                                    <td class="removeItem">
-                                        <a href="#" class="iconbtn btn-black btn-sm">
-                                            <i class="bi bi-x-circle-fill"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tbody id="cartItems">
                             </tbody>
                         </table>
                     </div>
@@ -297,9 +180,6 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="row mb-5">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <button class="btn btn-sm btn-block">Update Cart</button>
-                        </div>
                         <div class="col-md-6">
                             <a href="shop.html">
                                 <button class="btn btn-sm btn-block">Continue Shopping</button>
@@ -320,7 +200,7 @@
                                     <span class="text-black">Subtotal</span>
                                 </div>
                                 <div class="col-md-6 text-right">
-                                    <strong class="text-black">$230.00</strong>
+                                    <strong class="text-black cart-subtotal">$0.00</strong>
                                 </div>
                             </div>
                             <div class="row mb-5">
@@ -328,7 +208,7 @@
                                     <span class="text-black">Total</span>
                                 </div>
                                 <div class="col-md-6 text-right">
-                                    <strong class="text-black">$230.00</strong>
+                                    <strong class="text-black cart-total">$0.00</strong>
                                 </div>
                             </div>
 
@@ -417,6 +297,7 @@
         crossorigin="anonymous"></script>
 
     <script src="JS/main.js"></script>
+    <script src="JS/cart.js"></script>
 </body>
 
 </html>

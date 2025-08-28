@@ -78,3 +78,31 @@
 		padding: 0;
 	}
 }
+
+/* //////////////////////////////////// */
+
+.checkout-container {
+	margin: 180px auto;
+	max-width: 1100px;
+}
+
+.checkout-container .card {
+	border-radius: 15px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container .card-header {
+	background: #744312;
+	color: #fff;
+	border-radius: 15px 15px 0 0 !important;
+}
+
+.checkout-container .btn-place-order {
+	background: #744312;
+	color: #fff;
+	border-radius: 10px;
+}
+
+.checkout-container .btn-place-order:hover {
+	background: #744312;
+}

@@ -188,3 +188,56 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 })();
 
+
+/* ------------------------------------------------------------------ */
+/* ========================== Checkout ============================== */
+/* ------------------------------------------------------------------ */
+
+function loadOrderSummary() {
+  const orderSummary = document.getElementById("orderSummary");
+  const orderTotal = document.getElementById("orderTotal");
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  orderSummary.innerHTML = "";
+  let total = 0;
+
+  cart.forEach(item => {
+    let price = parseFloat(item.priceNumber) || 0;
+    let quantity = parseInt(item.quantity) || 0;
+
+    const li = document.createElement("li");
+    li.className = "list-group-item d-flex justify-content-between align-items-center";
+    li.innerHTML = `
+          ${item.name} (x${quantity})
+          <span>$${(price * quantity).toFixed(2)}</span>
+        `;
+
+    orderSummary.appendChild(li);
+    total += price * quantity;
+  });
+
+  orderTotal.textContent = `$${total.toFixed(2)}`;
+}
+
+window.onload = loadOrderSummary;
+
+/* ------------------------------------------------------------------ */
+/* ===================== Checkout(Place Order) ====================== */
+/* ------------------------------------------------------------------ */
+
+document.getElementById("placeOrderBtn").addEventListener("click", function () {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  if (cart.length === 0) {
+    alert("Please, First Add to cart...");
+    return;
+  }
+
+  alert("Your Order is submitted Successfully.");
+
+  localStorage.removeItem("cart");
+
+  loadOrderSummary();
+
+  window.location.href = "index.html";
+});
